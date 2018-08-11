@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlackHoleController : MonoBehaviour
 {
-    private static float BlackHoleMovementSpeed = 1f;
+    public float BlackHoleMovementSpeed = 1f;
     
     private List<Vector3> _nodelist;
     private Vector3 _currentTarget;
