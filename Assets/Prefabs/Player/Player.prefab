@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706387957766310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.27, y: -2.32, z: 0}
+  m_LocalPosition: {x: 2.95, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,7 +114,8 @@ MonoBehaviour:
     type: 2}
   TeleBallPredictorPrefab: {fileID: 50901231022535018, guid: 26330dad6e71447a5a073b78935a52ca,
     type: 2}
-  PlayerExitPrefab: {fileID: 0}
+  PlayerExitPrefab: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c,
+    type: 2}
 --- !u!114 &114663781446499022
 MonoBehaviour:
   m_ObjectHideFlags: 1
