@@ -42,7 +42,7 @@ namespace Player
                     else if (Input.GetMouseButtonDown(0)) {
                         startAiming = true;
                     }
-                    else if (Input.GetMouseButtonUp(0)) {
+                    else if (Input.GetMouseButtonUp(0) && startAiming) {
                         startAiming = false;
                         // TODO: shoot at mouse
                         foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
