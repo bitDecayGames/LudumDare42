@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114079359774351718}
   - component: {fileID: 50187736504916226}
   - component: {fileID: 70357885250756438}
+  - component: {fileID: 114942297140514616}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,6 +207,17 @@ MonoBehaviour:
     m_TypeName: Player.ShootAtMouse+OnShootEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   coolDownTimer: 0.1
+--- !u!114 &114942297140514616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262830614323884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114996600477653066
 MonoBehaviour:
   m_ObjectHideFlags: 1

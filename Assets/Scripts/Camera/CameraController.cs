@@ -17,7 +17,7 @@ public partial class CameraController : MonoBehaviour
     void Start()
     {
         _mainCamera = GetComponent<Camera>();
-        var centroid = calculateCentroid(FollowTransform.ConvertAll(t => t.position));
+        var centroid = calculateCentroid();
         transform.position = new Vector3(centroid.x, centroid.y, transform.position.z);
     }
 
@@ -34,8 +34,9 @@ public partial class CameraController : MonoBehaviour
         }
 
 
-        var location = calculateCentroid(FollowTransform.ConvertAll(t => t.position));
-        
+        Vector3 location = calculateCentroid();
+
+
         if (_isShaking)
         {
             _preShakePosition = Vector3.SmoothDamp(_preShakePosition, new Vector3(location.x, location.y, _preShakePosition.z),
@@ -48,11 +49,13 @@ public partial class CameraController : MonoBehaviour
         }
     }
 
-    private Vector3 calculateCentroid(List<Vector3> points) {
+    private Vector3 calculateCentroid() {
         var centroid = new Vector3(0, 0, 0);
-        if (points.Count > 0) {
-            points.ForEach(p => centroid += p);
-            centroid /= points.Count;
+        if (FollowTransform != null && FollowTransform.Count > 0) {
+            FollowTransform.ForEach(t => {
+                if (t != null) centroid += t.position;
+            });
+            centroid /= FollowTransform.Count;
         }
         return centroid;
     }
