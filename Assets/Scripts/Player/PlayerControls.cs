@@ -23,8 +23,8 @@ namespace Player
 
         void Start()
         {
-            shooter = GetComponent<ShootAtMouse>();
-            teleporter = GetComponent<TeleportToThing>();
+            shooter = GetComponentInChildren<ShootAtMouse>();
+            teleporter = GetComponentInChildren<TeleportToThing>();
         }
 
         void Update()
@@ -99,7 +99,6 @@ namespace Player
                 exit.GetComponentInChildren<Animator>().Play("TeleportOut");
 
                 var adjustment = new Vector3(0, 0, 0);
-                var newRot = new Vector3(0, 0, 0);
                 // TODO: this might act weird if there is more than 1 collision...
                 if (currentCollision != null && currentCollision.contactCount > 0)
                 {

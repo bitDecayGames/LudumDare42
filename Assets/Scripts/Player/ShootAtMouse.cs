@@ -2,8 +2,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Player {
-    public class ShootAtMouse : MonoBehaviour {
+namespace Player
+{
+    public class ShootAtMouse : MonoBehaviour
+    {
         [Serializable]
         public class OnShootEvent : UnityEvent<Transform> { }
 
@@ -17,18 +19,22 @@ namespace Player {
         private bool cooledDown;
         private float _currentCoolDown = 0.1f;
 
-        void Start() {
+        void Start()
+        {
             ResetCooldown();
         }
 
 
-        void Update() {
+        void Update()
+        {
             if (_currentCoolDown < 0) ResetCooldown();
             else if (!cooledDown) _currentCoolDown -= Time.deltaTime;
         }
-        
-        public void Shoot(Rigidbody2D thingToShoot, bool forced = false) {
-            if (canShoot && (cooledDown || forced)) {
+
+        public void Shoot(Rigidbody2D thingToShoot, bool forced = false)
+        {
+            if (canShoot && (cooledDown || forced))
+            {
                 cooledDown = false;
                 var thing = Instantiate(thingToShoot);
                 thing.gameObject.SetActive(true);
@@ -40,11 +46,12 @@ namespace Player {
             }
         }
 
-        private void ResetCooldown() {
+        private void ResetCooldown()
+        {
             _currentCoolDown = coolDownTimer;
             cooledDown = true;
         }
     }
 
-   
+
 }
