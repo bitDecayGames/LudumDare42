@@ -1,4 +1,4 @@
 ﻿public class Tags
 {
-    public static string DrawColliders = "No Tags Yet";
+    public static string FirstTag = "No Tags Yet";
 }
