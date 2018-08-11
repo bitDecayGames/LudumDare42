@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554213c6abfae40deb503c79024ba5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLimit: 2
+  TimeLimit: 5
 --- !u!114 &114758963670033106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c, type: 2}
+  shouldSpawn: 1
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
