@@ -15,7 +15,6 @@ namespace Player {
 
         public void Shoot(Rigidbody2D thingToShoot) {
             if (canShoot) {
-                Debug.Log("Shoot");
                 var thing = Instantiate(thingToShoot);
                 thing.gameObject.SetActive(true);
                 thing.transform.position = transform.position;

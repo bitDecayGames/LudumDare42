@@ -6,7 +6,6 @@ namespace Player {
 		public bool canTeleport = false;
 		
 		public void Teleport(Transform thing) {
-				Debug.Log("Teleport");
 			if (canTeleport) {
 				transform.position = thing.position;
 				canTeleport = false;
