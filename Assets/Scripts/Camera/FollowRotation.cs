@@ -4,6 +4,6 @@ public class FollowRotation : MonoBehaviour {
     public Transform Follow;
 
     void Update() {
-        transform.rotation.Set(Follow.rotation.x, Follow.rotation.y, Follow.rotation.z, Follow.rotation.w);
+        transform.rotation = Quaternion.Euler(0, 0, Follow.rotation.eulerAngles.z);
     }
 }
