@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d55035e097ea466bb868b98249941c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
-  minSpeed: 8
-  maxSpeed: 15
+  speed: 3
+  minSpeed: 4
+  maxSpeed: 10
   canShoot: 1
   onShoot:
     m_PersistentCalls:
