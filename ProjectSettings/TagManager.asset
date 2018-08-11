@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TelePredictor
+  - Killy
   layers:
   - Default
   - TransparentFX

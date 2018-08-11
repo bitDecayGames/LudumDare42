@@ -20,6 +20,7 @@ namespace Player
 
         private Collision2D currentCollision;
         private bool teleBallPositionIsValid = false;
+        private bool startAiming = false;
 
         void Start()
         {
@@ -32,14 +33,17 @@ namespace Player
             switch (phase)
             {
                 case AIM_PHASE:
-                    if (Input.GetMouseButton(0))
+                    if (startAiming && Input.GetMouseButton(0))
                     {
                         // TODO: initiate aim prediction
                         shooter.Shoot(TeleBallPredictorPrefab);
                         GetComponentInChildren<Animator>().Play("Aim");
                     }
-                    else if (Input.GetMouseButtonUp(0))
-                    {
+                    else if (Input.GetMouseButtonDown(0)) {
+                        startAiming = true;
+                    }
+                    else if (Input.GetMouseButtonUp(0)) {
+                        startAiming = false;
                         // TODO: shoot at mouse
                         foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
 
@@ -52,7 +56,13 @@ namespace Player
                     }
                     break;
                 case TELE_PHASE:
-                    if (Input.GetMouseButton(0))
+                    if (teleBallRef == null || !teleBallRef.gameObject.activeSelf) {
+                        phase = AIM_PHASE;
+                        teleBallRef = null;
+                        shooter.canShoot = true;
+                        teleBallPositionIsValid = false;
+                    }
+                    else if (Input.GetMouseButton(0))
                     {
                         // TODO: allow physics to proceed?
 
