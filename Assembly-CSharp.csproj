@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Environments\TriggerEnvironment.cs" />
     <Compile Include="Assets\Scripts\Environments\WaterEnvironment.cs" />
     <Compile Include="Assets\Scripts\Math\VectorMath.cs" />
+    <Compile Include="Assets\Scripts\Player\AddMyselfToCameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\CollideAlert.cs" />
     <Compile Include="Assets\Scripts\Player\DestroyAfterAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\DestroyAfterTimeLimit.cs" />
