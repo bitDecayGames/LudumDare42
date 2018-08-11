@@ -185,4 +185,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Follow: {fileID: 0}
-  smoothing: 0.09
+  smoothing: 0.074
+  automaticallyFollowPlayer: 1
