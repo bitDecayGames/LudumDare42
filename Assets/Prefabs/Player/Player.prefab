@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262830614323884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.53, y: -2.31, z: 0}
+  m_LocalPosition: {x: 0.55, y: 1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4886126548722846}
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d55035e097ea466bb868b98249941c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  minSpeed: 5
-  maxSpeed: 15
+  speed: 3
+  minSpeed: 4
+  maxSpeed: 10
   canShoot: 1
   onShoot:
     m_PersistentCalls:

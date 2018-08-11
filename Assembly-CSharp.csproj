@@ -68,12 +68,15 @@
     <Compile Include="Assets\Scripts\Math\VectorMath.cs" />
     <Compile Include="Assets\Scripts\Player\CollideAlert.cs" />
     <Compile Include="Assets\Scripts\Player\DestroyAfterAnimation.cs" />
+    <Compile Include="Assets\Scripts\Player\DestroyAfterTimeLimit.cs" />
     <Compile Include="Assets\Scripts\Player\FadeToDeath.cs" />
     <Compile Include="Assets\Scripts\Player\FollowMouseController.cs" />
     <Compile Include="Assets\Scripts\Player\GetSuckedIntoBlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
+    <Compile Include="Assets\Scripts\Player\KillOtherOnCollision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Player\ShootAtMouse.cs" />
+    <Compile Include="Assets\Scripts\Player\SpawnOnDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\TeleportToThing.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/mwingfield/Documents/LudumDare42/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
