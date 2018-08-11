@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\Camera\FollowRotation.cs" />
     <Compile Include="Assets\Scripts\Constants\Tags.cs" />
     <Compile Include="Assets\Scripts\Environments\InverseGravityEnvironment.cs" />
     <Compile Include="Assets\Scripts\Environments\TriggerEnvironment.cs" />
