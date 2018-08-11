@@ -8,13 +8,16 @@ namespace Player {
 		public class OnSpawnEvent : UnityEvent<Transform> {}
 	
 		public Transform Spawn;
+		public bool shouldSpawn = true;
 		public OnSpawnEvent OnSpawn;
-	
+
 		private void OnDestroy() {
-			var spawn = Instantiate(Spawn);
-			spawn.position = transform.position;
-			spawn.rotation = transform.rotation;
-			OnSpawn.Invoke(spawn);
+			if (shouldSpawn) {
+				var spawn = Instantiate(Spawn);
+				spawn.position = transform.position;
+				spawn.rotation = transform.rotation;
+				OnSpawn.Invoke(spawn);
+			}
 		}
 	}
 }

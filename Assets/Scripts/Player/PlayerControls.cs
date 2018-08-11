@@ -123,6 +123,7 @@ namespace Player
                 teleBallRef.transform.position = teleBallRef.position + adjustment;
 
                 teleporter.Teleport(teleBallRef);
+                teleBallRef.GetComponent<SpawnOnDestroy>().shouldSpawn = false;
                 Destroy(teleBallRef.gameObject);
                 teleBallRef = null;
                 shooter.canShoot = true;

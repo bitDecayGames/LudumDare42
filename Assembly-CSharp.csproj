@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Math\VectorMath.cs" />
     <Compile Include="Assets\Scripts\Player\CollideAlert.cs" />
     <Compile Include="Assets\Scripts\Player\DestroyAfterAnimation.cs" />
+    <Compile Include="Assets\Scripts\Player\DestroyAfterTimeLimit.cs" />
     <Compile Include="Assets\Scripts\Player\FadeToDeath.cs" />
     <Compile Include="Assets\Scripts\Player\FollowMouseController.cs" />
     <Compile Include="Assets\Scripts\Player\GetSuckedIntoBlackHoleController.cs" />

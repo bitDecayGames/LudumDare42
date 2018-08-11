@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 212067194089873872}
   - component: {fileID: 114758963670033106}
   - component: {fileID: 114766340985277386}
+  - component: {fileID: 114134560582860522}
   m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
@@ -79,6 +80,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114134560582860522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554213c6abfae40deb503c79024ba5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLimit: 2
 --- !u!114 &114758963670033106
 MonoBehaviour:
   m_ObjectHideFlags: 1
