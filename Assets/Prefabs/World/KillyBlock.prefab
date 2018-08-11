@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61187177788589490}
   - component: {fileID: 50982643398885700}
   - component: {fileID: 114527982229580584}
-  - component: {fileID: 114455835758660260}
   m_Layer: 10
   m_Name: KillyBlock
   m_TagString: Killy
@@ -89,17 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114455835758660260
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1455028035669208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c053455cc5c2c457db1c7cd849fd6508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114527982229580584
 MonoBehaviour:
   m_ObjectHideFlags: 1
