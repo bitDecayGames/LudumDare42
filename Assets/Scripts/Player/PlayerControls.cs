@@ -99,6 +99,7 @@ namespace Player
                 exit.GetComponentInChildren<Animator>().Play("TeleportOut");
 
                 var adjustment = new Vector3(0, 0, 0);
+                var newRot = new Vector3(0, 0, 0);
                 // TODO: this might act weird if there is more than 1 collision...
                 if (currentCollision != null && currentCollision.contactCount > 0)
                 {
@@ -106,9 +107,12 @@ namespace Player
                     var v2 = contactPoint.normal * -contactPoint.separation;
                     adjustment.x = v2.x;
                     adjustment.y = v2.y;
+
+                    teleBallRef.transform.rotation = Quaternion.FromToRotation(Vector3.up, contactPoint.normal);
                 }
 
                 teleBallRef.transform.position = teleBallRef.position + adjustment;
+
                 teleporter.Teleport(teleBallRef);
                 Destroy(teleBallRef.gameObject);
                 teleBallRef = null;
