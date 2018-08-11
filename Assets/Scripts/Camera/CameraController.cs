@@ -54,7 +54,6 @@ public partial class CameraController : MonoBehaviour
             points.ForEach(p => centroid += p);
             centroid /= points.Count;
         }
-        Debug.Log("Centroid: " + centroid);
         return centroid;
     }
 }
