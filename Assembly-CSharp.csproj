@@ -56,8 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\EditorScripts\CustomAssetImporter.cs" />
+    <Compile Include="Assets\Scripts\BlackHole\BlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Constants\Tags.cs" />
     <Compile Include="Assets\Scripts\Math\VectorMath.cs" />
+    <Compile Include="Assets\Scripts\Player\CollideAlert.cs" />
     <Compile Include="Assets\Scripts\Player\FollowMouseController.cs" />
     <Compile Include="Assets\Scripts\Player\GetSuckedIntoBlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControls.cs" />

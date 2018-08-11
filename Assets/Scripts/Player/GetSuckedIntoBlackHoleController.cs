@@ -10,9 +10,10 @@ public class GetSuckedIntoBlackHoleController : MonoBehaviour
         _blackHole = blackHoleGameObject;
     }
 
-    private void Start()
+    private void Start() 
     {
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        Destroy(GetComponent<Rigidbody2D>());
+        Destroy(GetComponent<Collider2D>());
     }
 
     void Update()
