@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58052759228571712}
   - component: {fileID: 212067194089873872}
   - component: {fileID: 114758963670033106}
+  - component: {fileID: 114766340985277386}
   m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
@@ -98,6 +99,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Player.CollideAlert+OnCollisionEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114766340985277386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575a6325040b742909a24e23edfe4088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c, type: 2}
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Player.SpawnOnDestroy+OnSpawnEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &212067194089873872
 SpriteRenderer:
