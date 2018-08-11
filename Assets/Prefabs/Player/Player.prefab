@@ -114,6 +114,7 @@ MonoBehaviour:
     type: 2}
   TeleBallPredictorPrefab: {fileID: 50901231022535018, guid: 26330dad6e71447a5a073b78935a52ca,
     type: 2}
+  PlayerExitPrefab: {fileID: 0}
 --- !u!114 &114663781446499022
 MonoBehaviour:
   m_ObjectHideFlags: 1
