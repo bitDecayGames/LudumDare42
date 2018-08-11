@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class SingletonExample : MonoBehaviour
+{
+    private static SingletonExample instance;
+    public static SingletonExample Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject gameObject = new GameObject();
+                instance = gameObject.AddComponent<SingletonExample>();
+                gameObject.name = "SFXManager";
+            }
+
+            return instance;
+        }
+    }
+	
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+}
