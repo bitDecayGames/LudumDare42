@@ -7,6 +7,7 @@ namespace Player {
         public const int TELE_PHASE = 1;
 
         public Rigidbody2D TeleBallPrefab;
+        public Rigidbody2D TeleBallPredictorPrefab;
         
         private int phase = AIM_PHASE;
 
@@ -25,11 +26,14 @@ namespace Player {
         void Update() {
             switch (phase) {
                 case AIM_PHASE:
-                    if (Input.GetMouseButtonDown(0)) {
+                    if (Input.GetMouseButton(0)) {
                         // TODO: initiate aim prediction
+                        shooter.Shoot(TeleBallPredictorPrefab);
                     } else if (Input.GetMouseButtonUp(0)) {
                         // TODO: shoot at mouse
-                        shooter.Shoot(TeleBallPrefab);
+                        foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
+                        
+                        shooter.Shoot(TeleBallPrefab, true);
                         phase = TELE_PHASE;
                         shooter.canShoot = false;
                         teleporter.canTeleport = true;
@@ -46,7 +50,7 @@ namespace Player {
                     break;
             }
         }
-
+        
         public void OnShoot(Transform shot) {
             teleBallRef = shot;
             var collideAlert = teleBallRef.GetComponent<CollideAlert>();

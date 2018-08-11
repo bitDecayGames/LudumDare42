@@ -13,8 +13,23 @@ namespace Player {
         public bool canShoot = true;
         public OnShootEvent onShoot = new OnShootEvent();
 
-        public void Shoot(Rigidbody2D thingToShoot) {
-            if (canShoot) {
+        public float coolDownTimer = 0.1f;
+        private bool cooledDown;
+        private float _currentCoolDown = 0.1f;
+
+        void Start() {
+            ResetCooldown();
+        }
+
+
+        void Update() {
+            if (_currentCoolDown < 0) ResetCooldown();
+            else if (!cooledDown) _currentCoolDown -= Time.deltaTime;
+        }
+        
+        public void Shoot(Rigidbody2D thingToShoot, bool forced = false) {
+            if (canShoot && (cooledDown || forced)) {
+                cooledDown = false;
                 var thing = Instantiate(thingToShoot);
                 thing.gameObject.SetActive(true);
                 thing.transform.position = transform.position;
@@ -23,6 +38,11 @@ namespace Player {
 
                 onShoot.Invoke(thing.transform);
             }
+        }
+
+        private void ResetCooldown() {
+            _currentCoolDown = coolDownTimer;
+            cooledDown = true;
         }
     }
 

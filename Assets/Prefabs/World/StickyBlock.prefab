@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212360822084690024}
   - component: {fileID: 61304775029943564}
   - component: {fileID: 50799021281788150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StickyBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4092689508071368}
   - component: {fileID: 60910995303523926}
   - component: {fileID: 114488148080261526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: InverseGravityEnvironment
   m_TagString: Untagged
   m_Icon: {fileID: 0}

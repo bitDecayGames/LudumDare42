@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Environments\TriggerEnvironment.cs" />
     <Compile Include="Assets\Scripts\Math\VectorMath.cs" />
     <Compile Include="Assets\Scripts\Player\CollideAlert.cs" />
+    <Compile Include="Assets\Scripts\Player\FadeToDeath.cs" />
     <Compile Include="Assets\Scripts\Player\FollowMouseController.cs" />
     <Compile Include="Assets\Scripts\Player\GetSuckedIntoBlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />

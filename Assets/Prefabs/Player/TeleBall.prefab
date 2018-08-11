@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58052759228571712}
   - component: {fileID: 212067194089873872}
   - component: {fileID: 114758963670033106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
