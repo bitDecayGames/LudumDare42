@@ -26,6 +26,9 @@ GameObject:
   - component: {fileID: 114766340985277386}
   - component: {fileID: 114134560582860522}
   - component: {fileID: 114100349638497850}
+  - component: {fileID: 114489328227467392}
+  - component: {fileID: 114838646517049184}
+  - component: {fileID: 114655793263960752}
   m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
@@ -104,6 +107,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeLimit: 5
+--- !u!114 &114489328227467392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114655793263960752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114758963670033106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +168,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Player.SpawnOnDestroy+OnSpawnEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114838646517049184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212067194089873872
 SpriteRenderer:
   m_ObjectHideFlags: 1
