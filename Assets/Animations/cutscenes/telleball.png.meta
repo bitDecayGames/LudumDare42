@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 818a8e439dcb372408d337e290738523
+guid: af2ad8d0e81c94bcc9e632540daf8158
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Helmet_0
-    21300002: Helmet_1
-    21300004: Helmet_2
-    21300006: Helmet_3
-    21300008: Helmet_4
-    21300010: Helmet_5
-    21300012: Helmet_6
-    21300014: Helmet_7
-    21300016: Helmet_8
-    21300018: Helmet_9
-    21300020: Helmet_10
-    21300022: Helmet_11
-    21300024: Helmet_12
-    21300026: Helmet_13
-    21300028: Helmet_14
-    21300030: Helmet_15
-    21300032: Helmet_16
-    21300034: Helmet_17
-    21300036: Helmet_18
-    21300038: Helmet_19
-    21300040: Helmet_20
-    21300042: Helmet_21
-    21300044: Helmet_22
-    21300046: Helmet_23
+    21300000: telleball_0
+    21300002: telleball_1
+    21300004: telleball_2
+    21300006: telleball_3
+    21300008: telleball_4
+    21300010: telleball_5
+    21300012: telleball_6
+    21300014: telleball_7
+    21300016: telleball_8
+    21300018: telleball_9
+    21300020: telleball_10
+    21300022: telleball_11
+    21300024: telleball_12
+    21300026: telleball_13
+    21300028: telleball_14
+    21300030: telleball_15
+    21300032: telleball_16
+    21300034: telleball_17
+    21300036: telleball_18
+    21300038: telleball_19
+    21300040: telleball_20
+    21300042: telleball_21
+    21300044: telleball_22
+    21300046: telleball_23
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Helmet_0
+      name: telleball_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,13 +122,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e72135daed4e4addba092ffc35ca7b9
+      spriteID: c2143b00f70624cdd8dd76fa1b1ab477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_1
+      name: telleball_1
       rect:
         serializedVersion: 2
         x: 700
@@ -142,13 +142,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ae4740c5bd54457ab7acacfd5108af
+      spriteID: cebf13447289d4aae8a3f1b6eb214920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_2
+      name: telleball_2
       rect:
         serializedVersion: 2
         x: 1400
@@ -162,13 +162,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49af85c7b71cb473bbc01925a5d30ce9
+      spriteID: 339dfb0f5ef704cb6889510ea4418487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_3
+      name: telleball_3
       rect:
         serializedVersion: 2
         x: 2100
@@ -182,13 +182,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb9e00288304e7db46f0961449c1ec
+      spriteID: f225c16b9584249e8bdd85df6434d116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_4
+      name: telleball_4
       rect:
         serializedVersion: 2
         x: 0
@@ -202,13 +202,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f020a86b149a94c9c836481ef40ba5be
+      spriteID: 86f93627a10384ce08db87080db26c85
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_5
+      name: telleball_5
       rect:
         serializedVersion: 2
         x: 700
@@ -222,13 +222,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d75324e3cc50048c2b15a7f8a95b17cd
+      spriteID: 6865914102adf4b478ae5c3ee26c379e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_6
+      name: telleball_6
       rect:
         serializedVersion: 2
         x: 1400
@@ -242,13 +242,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ad73eb7fce64d72af8c03e99a1c020
+      spriteID: b3bbb4570d9a34892afde1736b1c7dd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_7
+      name: telleball_7
       rect:
         serializedVersion: 2
         x: 2100
@@ -262,13 +262,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 200621df149c7493d8fc5fd0b3551da6
+      spriteID: aba757cf144e048a4acae7846c9cdd0a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_8
+      name: telleball_8
       rect:
         serializedVersion: 2
         x: 0
@@ -282,13 +282,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45eda52236e264db1a947e0fcf5f9bd1
+      spriteID: be93a8af847ac459ca1e371ec137d94e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_9
+      name: telleball_9
       rect:
         serializedVersion: 2
         x: 700
@@ -302,13 +302,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2994c372c066d4eeabd13943f4b8071f
+      spriteID: 143581373648047b684b4b06a2984598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_10
+      name: telleball_10
       rect:
         serializedVersion: 2
         x: 1400
@@ -322,13 +322,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bea3adda72fd43bf83c810140074d7f
+      spriteID: c4e52411f9f404538984626fc2d7e807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_11
+      name: telleball_11
       rect:
         serializedVersion: 2
         x: 2100
@@ -342,13 +342,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c656a114465c4ffab7ec59a4ac15b93
+      spriteID: 1d561ff0a4da1424e88d0a7ee4af6af8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_12
+      name: telleball_12
       rect:
         serializedVersion: 2
         x: 0
@@ -362,13 +362,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa77d1b9e10a64b8cb156e68523d520e
+      spriteID: 4b9a6ab5f1416428c887329aac02dd49
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_13
+      name: telleball_13
       rect:
         serializedVersion: 2
         x: 700
@@ -382,13 +382,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df5aa86560a7b4b3a8e421072f407e81
+      spriteID: af70846ffab624a55909703481f21df7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_14
+      name: telleball_14
       rect:
         serializedVersion: 2
         x: 1400
@@ -402,13 +402,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 095a3f2a354c7488aa7065eaccfd8d71
+      spriteID: b41cf902899184e4a9fa9192d3cfd61e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_15
+      name: telleball_15
       rect:
         serializedVersion: 2
         x: 2100
@@ -422,13 +422,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e7dae3077f3a473295091d2b23e3ef8
+      spriteID: f165e5efa339a4279bd01e531ed786c7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_16
+      name: telleball_16
       rect:
         serializedVersion: 2
         x: 0
@@ -442,13 +442,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5c1da9fd779406dad7ba3c0aa55644
+      spriteID: 48a58df8f36354454a5c6149829fe31e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_17
+      name: telleball_17
       rect:
         serializedVersion: 2
         x: 700
@@ -462,13 +462,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1695b8e67a61c4b5294941fd85259f14
+      spriteID: 7d36c6afb60ba4f2986162e3e9afb8f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_18
+      name: telleball_18
       rect:
         serializedVersion: 2
         x: 1400
@@ -482,13 +482,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c691466db1a8f47b08568097a8a553d9
+      spriteID: fd3697c65cd5e482382ecdbb116acdf6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_19
+      name: telleball_19
       rect:
         serializedVersion: 2
         x: 2100
@@ -502,13 +502,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515f23504949d4c7489c8ce54a88f127
+      spriteID: 1b4e4577bf5444b2faa5b805a708daee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_20
+      name: telleball_20
       rect:
         serializedVersion: 2
         x: 0
@@ -522,13 +522,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b29ae82738f4db4acd49d705017acd
+      spriteID: c355cabded0424a40b719c46159f8c4a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_21
+      name: telleball_21
       rect:
         serializedVersion: 2
         x: 700
@@ -542,13 +542,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00162fd28f304891a3c95261ae41295
+      spriteID: 3a84001e8cf0a414092727d75382438b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_22
+      name: telleball_22
       rect:
         serializedVersion: 2
         x: 1400
@@ -562,13 +562,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed6e03dac494d41a999756ada191a4cf
+      spriteID: 06ea40467bc47469da11e7ddcad7ba7d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_23
+      name: telleball_23
       rect:
         serializedVersion: 2
         x: 2100
@@ -582,7 +582,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6814735e56bc413cbebc19c2182c6a0
+      spriteID: 05f946a370b0746589b716ced21de0be
       vertices: []
       indices: 
       edges: []
@@ -590,7 +590,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4defccfd367f16f4e9e93dd36ddd34e0
+    spriteID: 37e9797de0fb74aafbabd2d1d74bdb49
     vertices: []
     indices: 
     edges: []

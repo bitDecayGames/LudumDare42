@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 818a8e439dcb372408d337e290738523
+guid: 6a92385a5d3da4a9a9f527de6209900e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Helmet_0
-    21300002: Helmet_1
-    21300004: Helmet_2
-    21300006: Helmet_3
-    21300008: Helmet_4
-    21300010: Helmet_5
-    21300012: Helmet_6
-    21300014: Helmet_7
-    21300016: Helmet_8
-    21300018: Helmet_9
-    21300020: Helmet_10
-    21300022: Helmet_11
-    21300024: Helmet_12
-    21300026: Helmet_13
-    21300028: Helmet_14
-    21300030: Helmet_15
-    21300032: Helmet_16
-    21300034: Helmet_17
-    21300036: Helmet_18
-    21300038: Helmet_19
-    21300040: Helmet_20
-    21300042: Helmet_21
-    21300044: Helmet_22
-    21300046: Helmet_23
+    21300000: beltFrames_0
+    21300002: beltFrames_1
+    21300004: beltFrames_2
+    21300006: beltFrames_3
+    21300008: beltFrames_4
+    21300010: beltFrames_5
+    21300012: beltFrames_6
+    21300014: beltFrames_7
+    21300016: beltFrames_8
+    21300018: beltFrames_9
+    21300020: beltFrames_10
+    21300022: beltFrames_11
+    21300024: beltFrames_12
+    21300026: beltFrames_13
+    21300028: beltFrames_14
+    21300030: beltFrames_15
+    21300032: beltFrames_16
+    21300034: beltFrames_17
+    21300036: beltFrames_18
+    21300038: beltFrames_19
+    21300040: beltFrames_20
+    21300042: beltFrames_21
+    21300044: beltFrames_22
+    21300046: beltFrames_23
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Helmet_0
+      name: beltFrames_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,13 +122,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e72135daed4e4addba092ffc35ca7b9
+      spriteID: f1f88da5dc78f4acfb230dbef871da6c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_1
+      name: beltFrames_1
       rect:
         serializedVersion: 2
         x: 700
@@ -142,13 +142,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ae4740c5bd54457ab7acacfd5108af
+      spriteID: a06fa1b541b3a4ed29374c454d5af16e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_2
+      name: beltFrames_2
       rect:
         serializedVersion: 2
         x: 1400
@@ -162,13 +162,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49af85c7b71cb473bbc01925a5d30ce9
+      spriteID: a5f0ea10603384a8597c6e078e75dd21
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_3
+      name: beltFrames_3
       rect:
         serializedVersion: 2
         x: 2100
@@ -182,13 +182,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb9e00288304e7db46f0961449c1ec
+      spriteID: c2195ae6f5aaa4f229e939590475057b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_4
+      name: beltFrames_4
       rect:
         serializedVersion: 2
         x: 0
@@ -202,13 +202,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f020a86b149a94c9c836481ef40ba5be
+      spriteID: cb8f9dc7939c94c6aa9d3ead2c086cb1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_5
+      name: beltFrames_5
       rect:
         serializedVersion: 2
         x: 700
@@ -222,13 +222,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d75324e3cc50048c2b15a7f8a95b17cd
+      spriteID: 4453d20801e1f4f5a9bda3ce40a65f9e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_6
+      name: beltFrames_6
       rect:
         serializedVersion: 2
         x: 1400
@@ -242,13 +242,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ad73eb7fce64d72af8c03e99a1c020
+      spriteID: 592245d44181240d996f5eb8f81878db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_7
+      name: beltFrames_7
       rect:
         serializedVersion: 2
         x: 2100
@@ -262,13 +262,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 200621df149c7493d8fc5fd0b3551da6
+      spriteID: 5b91d8ced079745558fa76804528a36c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_8
+      name: beltFrames_8
       rect:
         serializedVersion: 2
         x: 0
@@ -282,13 +282,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45eda52236e264db1a947e0fcf5f9bd1
+      spriteID: 750b5e14bad3344dbb87b8174cb25340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_9
+      name: beltFrames_9
       rect:
         serializedVersion: 2
         x: 700
@@ -302,13 +302,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2994c372c066d4eeabd13943f4b8071f
+      spriteID: 3210ca535eed240758459125103191fe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_10
+      name: beltFrames_10
       rect:
         serializedVersion: 2
         x: 1400
@@ -322,13 +322,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bea3adda72fd43bf83c810140074d7f
+      spriteID: cb933e77e262e4747b31afb875957c6f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_11
+      name: beltFrames_11
       rect:
         serializedVersion: 2
         x: 2100
@@ -342,13 +342,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c656a114465c4ffab7ec59a4ac15b93
+      spriteID: 4c6afe22c39594a7385e330e1d21ddf0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_12
+      name: beltFrames_12
       rect:
         serializedVersion: 2
         x: 0
@@ -362,13 +362,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa77d1b9e10a64b8cb156e68523d520e
+      spriteID: 6a56c9e1a41934f638e0daabc57b945f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_13
+      name: beltFrames_13
       rect:
         serializedVersion: 2
         x: 700
@@ -382,13 +382,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df5aa86560a7b4b3a8e421072f407e81
+      spriteID: 6d62eac2922104fb78443d944424ba45
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_14
+      name: beltFrames_14
       rect:
         serializedVersion: 2
         x: 1400
@@ -402,13 +402,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 095a3f2a354c7488aa7065eaccfd8d71
+      spriteID: e0d856fb0350546109def32ea5d1baa1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_15
+      name: beltFrames_15
       rect:
         serializedVersion: 2
         x: 2100
@@ -422,13 +422,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e7dae3077f3a473295091d2b23e3ef8
+      spriteID: ffbb84e583c6d464db93428a2046116a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_16
+      name: beltFrames_16
       rect:
         serializedVersion: 2
         x: 0
@@ -442,13 +442,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5c1da9fd779406dad7ba3c0aa55644
+      spriteID: 41689b741e97d4ce98cb7bc6f7076f4b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_17
+      name: beltFrames_17
       rect:
         serializedVersion: 2
         x: 700
@@ -462,13 +462,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1695b8e67a61c4b5294941fd85259f14
+      spriteID: cf187baaf705e40808025c6e38110ddb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_18
+      name: beltFrames_18
       rect:
         serializedVersion: 2
         x: 1400
@@ -482,13 +482,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c691466db1a8f47b08568097a8a553d9
+      spriteID: 82ed33385973e41a28fd769d814c6ceb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_19
+      name: beltFrames_19
       rect:
         serializedVersion: 2
         x: 2100
@@ -502,13 +502,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515f23504949d4c7489c8ce54a88f127
+      spriteID: ff679f03bdd7f4529b2d0c3a1a6aca0c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_20
+      name: beltFrames_20
       rect:
         serializedVersion: 2
         x: 0
@@ -522,13 +522,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b29ae82738f4db4acd49d705017acd
+      spriteID: 7c3d791d11be94a9ca1b3d03587c9ea1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_21
+      name: beltFrames_21
       rect:
         serializedVersion: 2
         x: 700
@@ -542,13 +542,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00162fd28f304891a3c95261ae41295
+      spriteID: 629d0493af88c43e4b6e1e5e770acdc8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_22
+      name: beltFrames_22
       rect:
         serializedVersion: 2
         x: 1400
@@ -562,13 +562,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed6e03dac494d41a999756ada191a4cf
+      spriteID: 7b63a10bac4874b29a73ae70a7d2ae8f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helmet_23
+      name: beltFrames_23
       rect:
         serializedVersion: 2
         x: 2100
@@ -582,7 +582,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6814735e56bc413cbebc19c2182c6a0
+      spriteID: 228b4c0693e9e4619a986ab90b6be6af
       vertices: []
       indices: 
       edges: []
@@ -590,7 +590,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4defccfd367f16f4e9e93dd36ddd34e0
+    spriteID: 6abbd71f004fd46f180d1e60f49b4525
     vertices: []
     indices: 
     edges: []
