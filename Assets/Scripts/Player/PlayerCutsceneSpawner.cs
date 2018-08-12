@@ -46,7 +46,6 @@ namespace Player
                     if (_hatchDelay <= 0)
                     {
                         _hatchDelay = OpenDelay;
-                        Debug.Log("OPEN STATE HIT");
                         hatch.Play("Open");
                         currentState = SpawnState.SPAWN;
                     }
@@ -54,7 +53,6 @@ namespace Player
                 case SpawnState.SPAWN:
                     if (_shootTimer < 0)
                     {
-                        Debug.Log("SHOOTING");
                         bullet = Instantiate(SpawnLocationPrefab);
                         bullet.transform.position = transform.position;
                         bullet.velocity = ShootVector;
@@ -66,7 +64,6 @@ namespace Player
                     _hatchDelay -= Time.deltaTime;
                     if (_hatchDelay <= 0)
                     {
-                        Debug.Log("CLOSE STATE HIT");
                         hatch.Play("Close");
                         currentState = SpawnState.CLOSE;
                     }
