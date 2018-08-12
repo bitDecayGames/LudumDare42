@@ -14,6 +14,7 @@ namespace Player
 
         public const int AIM_PHASE = 0;
         public const int TELE_PHASE = 1;
+        public const int DEATH_PHASE = 2;
 
         public Rigidbody2D TeleBallPrefab;
         public Rigidbody2D TeleBallPredictorPrefab;
@@ -89,6 +90,11 @@ namespace Player
                     }
                     break;
             }
+        }
+
+        public void Die() {
+            phase = DEATH_PHASE;
+            GetComponentInChildren<Animator>().Play("Death");
         }
 
         public void OnShoot(Transform shot)

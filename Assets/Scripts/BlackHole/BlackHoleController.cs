@@ -48,6 +48,16 @@ public class BlackHoleController : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name.ToLower().Contains("player"))
+        {
+            var blackHoleController = other.gameObject.AddComponent<GetSuckedIntoBlackHoleController>();
+            blackHoleController.SetBlackHole(gameObject);
+            other.gameObject.SendMessage("Die");
+            Destroy(this);
+        }
+    }
 
     private void Update()
     {
