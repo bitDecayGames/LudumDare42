@@ -31,10 +31,13 @@ namespace Player
         private bool teleBallPositionIsValid = false;
         private bool startAiming = false;
 
+        private MetricTracker tracker;
+
         void Start()
         {
             shooter = GetComponentInChildren<ShootAtMouse>();
             teleporter = GetComponentInChildren<TeleportToThing>();
+            tracker = Camera.main.GetComponent<MetricTracker>();
         }
 
         void Update()
@@ -124,6 +127,7 @@ namespace Player
         {
             if (teleBallRef != null)
             {
+                tracker.AddToTracking(MetricTracker.TELEPORT);
                 Transform exit = Instantiate(PlayerExitPrefab);
                 exit.position = transform.position;
                 exit.rotation = transform.rotation;

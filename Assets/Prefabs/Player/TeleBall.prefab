@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 114489328227467392}
   - component: {fileID: 114838646517049184}
   - component: {fileID: 114655793263960752}
+  - component: {fileID: 114452067514868748}
+  - component: {fileID: 114086517279027808}
   m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
@@ -84,6 +86,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114086517279027808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab76cfeb76a92474bbee05e96d057279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MetricKey: BALL_DEATH
 --- !u!114 &114100349638497850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +121,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeLimit: 5
+  MetricKey: BALL_TIME_OUT
+--- !u!114 &114452067514868748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736c95524790d4d888d8229061e06709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MetricKey: BALLS_THROWN
 --- !u!114 &114489328227467392
 MonoBehaviour:
   m_ObjectHideFlags: 1

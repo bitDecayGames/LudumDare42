@@ -5,6 +5,8 @@ namespace Player {
 
 		public float TimeLimit;
 
+		public string MetricKey;
+
 		private float _timeLimit;
 		
 		void Start () {
@@ -12,7 +14,13 @@ namespace Player {
 		}
 	
 		void Update () {
-			if (_timeLimit < 0) Destroy(gameObject);
+			if (_timeLimit < 0) {
+				if (!string.IsNullOrEmpty(MetricKey)) {
+					var tracker = Camera.main.GetComponent<MetricTracker>();
+					if (tracker) tracker.AddToTracking(MetricKey);
+				}
+				Destroy(gameObject);
+			}
 			else _timeLimit -= Time.deltaTime;
 		}
 	}
