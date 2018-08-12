@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class FollowRotation : MonoBehaviour {
+public class FollowRotation : MonoBehaviour
+{
     public Transform Follow;
 
     [Range(0.0001f, 1)]
@@ -8,15 +9,24 @@ public class FollowRotation : MonoBehaviour {
 
     public bool automaticallyFollowPlayer = true;
 
-    void Start() {
-        if (automaticallyFollowPlayer) {
+    void Start()
+    {
+        if (automaticallyFollowPlayer)
+        {
             var player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) Follow = player.transform;
         }
     }
 
-    void Update() {
-        if (Follow != null) {
+    void Update()
+    {
+        if (automaticallyFollowPlayer)
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null) Follow = player.transform;
+        }
+        if (Follow != null)
+        {
             var cur = transform.rotation.eulerAngles.z;
             var target = Follow.rotation.eulerAngles.z;
             var diff = target - cur;

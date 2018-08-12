@@ -4,16 +4,16 @@ using UnityEngine;
 public partial class CameraController : MonoBehaviour
 {
     public List<Transform> FollowTransform;
-    
+
     private const float SmoothTime = .5f;
     private const float DefaultZoom = 6f;
 
     private float _goalZoom = 6f;
-    
+
     private Camera _mainCamera;
     private Vector3 _min, _max;
     private Vector3 _velocity;
-    
+
     void Start()
     {
         _mainCamera = GetComponent<Camera>();
@@ -49,10 +49,17 @@ public partial class CameraController : MonoBehaviour
         }
     }
 
-    private Vector3 calculateCentroid() {
+    private Vector3 calculateCentroid()
+    {
+        if (FollowTransform.Count <= 0)
+        {
+            return transform.position;
+        }
         var centroid = new Vector3(0, 0, 0);
-        if (FollowTransform != null && FollowTransform.Count > 0) {
-            FollowTransform.ForEach(t => {
+        if (FollowTransform != null && FollowTransform.Count > 0)
+        {
+            FollowTransform.ForEach(t =>
+            {
                 if (t != null) centroid += t.position;
             });
             centroid /= FollowTransform.Count;

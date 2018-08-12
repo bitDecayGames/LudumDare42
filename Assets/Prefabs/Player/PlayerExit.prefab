@@ -34,6 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4216615772011312}
+  - component: {fileID: 114703190376187794}
   - component: {fileID: 212039194003172800}
   - component: {fileID: 95155898160793318}
   - component: {fileID: 114382373307027164}
@@ -101,6 +102,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  destroyParent: 1
+--- !u!114 &114703190376187794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451364358679320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171fd35c4b9104f2495ef8c8b7276196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationName: TeleportOut
 --- !u!212 &212039194003172800
 SpriteRenderer:
   m_ObjectHideFlags: 1

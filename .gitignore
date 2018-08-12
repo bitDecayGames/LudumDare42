@@ -1,4 +1,7 @@
 .idea
 Temp
 Library
-
+*.csproj
+*.sln
+*.log
+**/*.cache
