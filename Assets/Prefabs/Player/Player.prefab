@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262830614323884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 1.99, z: 0}
+  m_LocalPosition: {x: -2.28, y: -2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4886126548722846}
@@ -175,6 +175,12 @@ MonoBehaviour:
     type: 2}
   PlayerExitPrefab: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c,
     type: 2}
+  bounceMaterial: {fileID: 6200000, guid: 3a48687d7c12b47bf885d3d3e82c3443, type: 2}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Player.PlayerControls+TeleportEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114795793270498356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,7 +270,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0104c7e53e766c0459e581475ded669c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

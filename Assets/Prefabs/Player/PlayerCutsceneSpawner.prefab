@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491232567921776}
   - component: {fileID: 114585203627673844}
+  - component: {fileID: 114701434223790140}
   m_Layer: 0
   m_Name: CamFollow
   m_TagString: Untagged
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnLocationPrefab: {fileID: 50872409825326372, guid: 696e6d64ff1f7423e84d1ebb8a14fc37,
     type: 2}
-  ShootVector: {x: 5, y: 5}
+  ShootVector: {x: 3, y: 5}
   ShootDelay: 2
 --- !u!114 &114585203627673844
 MonoBehaviour:
@@ -96,3 +97,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114701434223790140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129558979984054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554213c6abfae40deb503c79024ba5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLimit: 5
