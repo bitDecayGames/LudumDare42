@@ -11,6 +11,7 @@ namespace Player
         public Rigidbody2D TeleBallPrefab;
         public Rigidbody2D TeleBallPredictorPrefab;
         public Transform PlayerExitPrefab;
+        public PhysicsMaterial2D bounceMaterial;
 
         private int phase = AIM_PHASE;
 
@@ -91,7 +92,17 @@ namespace Player
         private void TeleBallCollidedWithSomething(Collision2D other)
         {
             currentCollision = other;
-            teleBallPositionIsValid = true;
+
+            // Do not collide with steel/bouncy tiles.
+            Debug.Log(other.rigidbody.sharedMaterial);
+            if (other.rigidbody.sharedMaterial == bounceMaterial)
+            {
+                teleBallPositionIsValid = false;
+            }
+            else
+            {
+                teleBallPositionIsValid = true;
+            }
         }
 
         private void TeleBallStoppedCollidingWithSomething(Collision2D other)
