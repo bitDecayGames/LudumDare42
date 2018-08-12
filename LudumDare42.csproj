@@ -307,6 +307,7 @@
     <Compile Include="Assets\Scripts\BlackHole\BlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraWarpShader.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowRotation.cs" />
     <Compile Include="Assets\Scripts\Constants\Tags.cs" />
@@ -327,8 +328,13 @@
     <Compile Include="Assets\Scripts\Player\ShootAtMouse.cs" />
     <Compile Include="Assets\Scripts\Player\SpawnOnDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\TeleportToThing.cs" />
+    <Compile Include="Assets\Scripts\Shaders\BlackHoleEffect.cs" />
+    <Compile Include="Assets\Scripts\Shaders\BrownHoleEffect.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\BlackHoleShader.shader" />
+    <None Include="Assets\Shaders\BrownHoleShader.shader" />
+    <None Include="Assets\Shaders\WarpShader.shader" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
