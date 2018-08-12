@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4122398547127836}
   - component: {fileID: 20451885216600936}
+  - component: {fileID: 114237994872971094}
   m_Layer: 0
   m_Name: ForegroundCamera
   m_TagString: Untagged
@@ -127,7 +128,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -242,6 +243,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowTransform: []
+--- !u!114 &114237994872971094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243947164355816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a84ae27760144500bedbef115bb6a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHoleShader: {fileID: 4800000, guid: 553b27f7a6971441c98b497007b4a8d5, type: 3}
+  blackHole: {fileID: 0}
+  radius: 0.112
+  distance: 0.2
+  black: 0
+  ratio: 0.625
 --- !u!114 &114907317647075540
 MonoBehaviour:
   m_ObjectHideFlags: 1

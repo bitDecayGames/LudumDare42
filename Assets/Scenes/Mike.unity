@@ -155,6 +155,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf0ce718a5a7496f9fbc861943fe1ab, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &43673535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43673537}
+  m_Layer: 0
+  m_Name: BlackHole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &43673537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43673535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1, y: -2.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275132216
 Prefab:
   m_ObjectHideFlags: 0
@@ -206,11 +234,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4837599833348082, guid: 6653c78a0a6774dbea4b477ffcf5166b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 19.49
+      value: 13.4
       objectReference: {fileID: 0}
     - target: {fileID: 4837599833348082, guid: 6653c78a0a6774dbea4b477ffcf5166b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.89
+      value: 5.07
       objectReference: {fileID: 0}
     - target: {fileID: 4837599833348082, guid: 6653c78a0a6774dbea4b477ffcf5166b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -308,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 610044367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.224, y: 0.73, z: -10}
+  m_LocalPosition: {x: -10.224, y: 0.73, z: 0}
   m_LocalScale: {x: 7.92, y: 6.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -353,6 +381,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114237994872971094, guid: ec030b0466d0615459f22dc92b4c498a,
+        type: 2}
+      propertyPath: blackHole
+      value: 
+      objectReference: {fileID: 43673537}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec030b0466d0615459f22dc92b4c498a, type: 2}
   m_IsPrefabAsset: 0
@@ -425,7 +458,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1185511943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.526, y: 1.84, z: -10}
+  m_LocalPosition: {x: -10.526, y: 1.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
