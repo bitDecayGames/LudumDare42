@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 223941081512139606}
   - component: {fileID: 114704075312006158}
   - component: {fileID: 114595307972530438}
+  - component: {fileID: 114999798903156670}
   m_Layer: 5
   m_Name: EventCutscene
   m_TagString: Untagged
@@ -218,6 +219,22 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &114999798903156670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130789245842912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac1b6ebdc9c98c40b2958d7e8bbb3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnDestroyCallEvent+OnDestroyEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &222971248644114814
 CanvasRenderer:
   m_ObjectHideFlags: 1
