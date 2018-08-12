@@ -5,6 +5,8 @@ namespace Player
     public class PlayerCutsceneSpawner : MonoBehaviour
     {
 
+        private CameraController cam;
+
         public Rigidbody2D SpawnLocationPrefab;
         public Vector2 ShootVector;
         public float ShootDelay;
@@ -18,6 +20,7 @@ namespace Player
 
         private enum SpawnState
         {
+            PRE,
             START,
             SPAWN,
             CLOSE,
@@ -29,18 +32,40 @@ namespace Player
         // Use this for initialization
         void Start()
         {
-            currentState = SpawnState.START;
+            currentState = SpawnState.PRE;
             _hatchDelay = OpenDelay;
             _shootTimer = ShootDelay;
             hatch = GetComponentInChildren<Animator>();
             hatch.Play("Idle");
         }
 
+        public void startSequence()
+        {
+            currentState = SpawnState.START;
+            cam = Camera.main.GetComponent<CameraController>();
+            if (cam != null)
+            {
+                cam.FollowTransform.Add(transform);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (cam != null)
+            {
+                cam.FollowTransform.Remove(transform);
+            }
+        }
+
+
+
         // Update is called once per frame
         void Update()
         {
             switch (currentState)
             {
+                case SpawnState.PRE:
+                    break;
                 case SpawnState.START:
                     _hatchDelay -= Time.deltaTime;
                     if (_hatchDelay <= 0)
