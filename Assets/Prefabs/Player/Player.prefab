@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50187736504916226}
   - component: {fileID: 70357885250756438}
   - component: {fileID: 114942297140514616}
+  - component: {fileID: 114286435386285808}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -175,12 +176,22 @@ MonoBehaviour:
     type: 2}
   PlayerExitPrefab: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c,
     type: 2}
-  bounceMaterial: {fileID: 6200000, guid: 3a48687d7c12b47bf885d3d3e82c3443, type: 2}
   onTeleport:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Player.PlayerControls+TeleportEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114286435386285808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262830614323884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9374ad80eafcc472c9ee66f7d04e7569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114795793270498356
 MonoBehaviour:
   m_ObjectHideFlags: 1

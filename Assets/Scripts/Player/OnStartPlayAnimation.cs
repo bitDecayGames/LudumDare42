@@ -12,7 +12,6 @@ namespace Player {
 
 		private void Init() {
 			if (AnimationName != null) {
-				Debug.Log("Awake: " + AnimationName);
 				GetComponent<Animator>().Play(AnimationName);
 			}
 		}
