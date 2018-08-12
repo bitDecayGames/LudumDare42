@@ -13,6 +13,10 @@ namespace Player {
 		void OnCollisionEnter2D(Collision2D other) {
 			OnCollideEnter.Invoke(other);
 		}
+		
+		void OnCollisionStay2D(Collision2D other) {
+			OnCollideEnter.Invoke(other);
+		}
 
 		void OnCollisionExit2D(Collision2D other) {
 			OnCollideExit.Invoke(other);

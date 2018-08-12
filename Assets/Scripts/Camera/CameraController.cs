@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public partial class CameraController : MonoBehaviour
 {
-    public Transform FollowTransform;
+    public List<Transform> FollowTransform;
     
     private const float SmoothTime = .5f;
     private const float DefaultZoom = 6f;
@@ -16,13 +17,12 @@ public partial class CameraController : MonoBehaviour
     void Start()
     {
         _mainCamera = GetComponent<Camera>();
-        transform.position = new Vector3(FollowTransform.position.x, FollowTransform.position.y, transform.position.z);
+        var centroid = calculateCentroid();
+        transform.position = new Vector3(centroid.x, centroid.y, transform.position.z);
     }
 
     void Update()
     {
-        if (FollowTransform == null)
-
         if (_isShaking)
         {
             ShakeScreen();
@@ -33,9 +33,10 @@ public partial class CameraController : MonoBehaviour
             MoveCameraZoom();
         }
 
-        var bounds = new Bounds(FollowTransform.transform.position, Vector3.zero);
-        var location = bounds.center;
-        
+
+        Vector3 location = calculateCentroid();
+
+
         if (_isShaking)
         {
             _preShakePosition = Vector3.SmoothDamp(_preShakePosition, new Vector3(location.x, location.y, _preShakePosition.z),
@@ -46,6 +47,17 @@ public partial class CameraController : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.position, new Vector3(location.x, location.y, transform.position.z),
                 ref _velocity, SmoothTime);
         }
+    }
+
+    private Vector3 calculateCentroid() {
+        var centroid = new Vector3(0, 0, 0);
+        if (FollowTransform != null && FollowTransform.Count > 0) {
+            FollowTransform.ForEach(t => {
+                if (t != null) centroid += t.position;
+            });
+            centroid /= FollowTransform.Count;
+        }
+        return centroid;
     }
 }
 
