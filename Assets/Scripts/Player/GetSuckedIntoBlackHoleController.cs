@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class GetSuckedIntoBlackHoleController : MonoBehaviour
 {
     private static float BlackHoleSuckingSpeed = 1.5f;
-    private float deathAnimationTimer = 5f;
+    private float deathAnimationTimer = 6f;
     
     private GameObject _blackHole;
     
@@ -24,8 +26,7 @@ public class GetSuckedIntoBlackHoleController : MonoBehaviour
 
         deathAnimationTimer -= Time.deltaTime;
         if (deathAnimationTimer <= 0f) {
-            Destroy(gameObject);
-            Destroy(_blackHole);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
