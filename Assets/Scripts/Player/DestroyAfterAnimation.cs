@@ -16,7 +16,6 @@ public class DestroyAfterAnimation : MonoBehaviour
         var obj = gameObject;
         if (destroyParent) obj = transform.parent.gameObject;
         var anim = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-        Debug.Log("Anim: " + anim.length);
         Destroy(obj, anim.length + delay);
     }
 }

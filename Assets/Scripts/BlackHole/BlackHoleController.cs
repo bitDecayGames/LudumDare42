@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BlackHoleController : MonoBehaviour
 {
-    public float BlackHoleMovementSpeed = 1f;
+    public float DefaultBlackHoleMovementSpeed = 2f;
     public GameObject PathMarkers;
     
-    private List<Vector3> _nodelist;
-    private Vector3 _currentTarget;
+    private Queue<PathNode> _nodeQueue;
+    private PathNode _currentNode;
 
     private bool _done;
     
     private void Start()
     {
-        _nodelist = new List<Vector3>();
+        _nodeQueue = new Queue<PathNode>();
 
         if (PathMarkers == null)
         {
@@ -27,11 +27,17 @@ public class BlackHoleController : MonoBehaviour
         
         foreach(Transform child in PathMarkers.transform)
         {
-            _nodelist.Add(child.transform.position);
+            BlackHoleSpeed speed = child.gameObject.GetComponent<BlackHoleSpeed>();
+
+            PathNode node = new PathNode();
+            node.position = child.transform.position;
+            node.speed = speed ? speed.Speed : DefaultBlackHoleMovementSpeed;
+
+            _nodeQueue.Enqueue(node);
             Destroy(child.gameObject);
         }
 
-        if (_nodelist.Count == 0)
+        if (_nodeQueue.Count == 0)
         {
             Debug.Log("No movement nodes detected");
             _done = true;
@@ -50,11 +56,11 @@ public class BlackHoleController : MonoBehaviour
             return;
         }
         
-        transform.position = Vector3.MoveTowards(transform.position, _currentTarget, BlackHoleMovementSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _currentNode.position, _currentNode.speed * Time.deltaTime);
 
-        if (VectorMath.AreVectorsEqual(transform.position, _currentTarget))
+        if (VectorMath.AreVectorsEqual(transform.position, _currentNode.position))
         {
-            if (_nodelist.Count > 0)
+            if (_nodeQueue.Count > 0)
             {
                 LoadNextNode();
             }
@@ -68,7 +74,12 @@ public class BlackHoleController : MonoBehaviour
     private void LoadNextNode()
     {
         Debug.Log("Loading in next node");
-        _currentTarget = _nodelist[0];
-        _nodelist.RemoveAt(0);
+        _currentNode = _nodeQueue.Dequeue();
     }
+}
+
+struct PathNode
+{
+    public Vector3 position;
+    public float speed;
 }
