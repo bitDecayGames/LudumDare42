@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlackHoleController : MonoBehaviour
 {
     public float BlackHoleMovementSpeed = 1f;
+    public GameObject PathMarkers;
     
     private List<Vector3> _nodelist;
     private Vector3 _currentTarget;
@@ -13,8 +15,17 @@ public class BlackHoleController : MonoBehaviour
     private void Start()
     {
         _nodelist = new List<Vector3>();
+
+        if (PathMarkers == null)
+        {
+            throw new Exception("No PathMarkers found");
+        }
+        if (!PathMarkers.name.Equals("PathMarkers"))
+        {
+            throw new Exception("Only the PathMarkers prefab can be set as the Path Markers object");
+        }
         
-        foreach(Transform child in transform)
+        foreach(Transform child in PathMarkers.transform)
         {
             _nodelist.Add(child.transform.position);
             Destroy(child.gameObject);
