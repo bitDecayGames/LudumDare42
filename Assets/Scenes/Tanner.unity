@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacb087df7eb43cfbc21661fe6596660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlackHoleMovementSpeed: 1
 --- !u!1 &990000557
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +341,9 @@ GameObject:
   - component: {fileID: 990000561}
   - component: {fileID: 990000560}
   - component: {fileID: 990000559}
-  - component: {fileID: 990000562}
   - component: {fileID: 990000558}
+  - component: {fileID: 990000563}
+  - component: {fileID: 990000562}
   m_Layer: 0
   m_Name: Controllable
   m_TagString: Untagged
@@ -461,10 +463,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 990000557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c909e0881e24352b273a928277e8811, type: 3}
+  m_Script: {fileID: 11500000, guid: 53d178387c534971bdbe0b335dbbafd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BlackHole: {fileID: 762839611}
+--- !u!114 &990000563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990000557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music/MainTheme
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1054222511
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +499,7 @@ GameObject:
   - component: {fileID: 1054222514}
   - component: {fileID: 1054222513}
   - component: {fileID: 1054222512}
+  - component: {fileID: 1054222515}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -542,6 +567,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054222515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054222511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1294077577
 GameObject:
   m_ObjectHideFlags: 0
