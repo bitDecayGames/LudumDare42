@@ -18,7 +18,6 @@ namespace Player
         public Rigidbody2D TeleBallPrefab;
         public Rigidbody2D TeleBallPredictorPrefab;
         public Transform PlayerExitPrefab;
-        public PhysicsMaterial2D bounceMaterial;
 
         public TeleportEvent onTeleport;
 
@@ -105,9 +104,8 @@ namespace Player
         {
             currentCollision = other;
 
-            // Do not collide with steel/bouncy tiles.
-            Debug.Log(other.rigidbody.sharedMaterial);
-            if (other.rigidbody.sharedMaterial == bounceMaterial)
+            // Do not collide with bad/corrupted tiles.
+            if (other.gameObject.tag == Tags.BadTiles)
             {
                 teleBallPositionIsValid = false;
             }
