@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Player\GetSuckedIntoBlackHoleController.cs" />
     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Player\KillOtherOnCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\OnStartPlayAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Player\ShootAtMouse.cs" />
     <Compile Include="Assets\Scripts\Player\SpawnOnDestroy.cs" />

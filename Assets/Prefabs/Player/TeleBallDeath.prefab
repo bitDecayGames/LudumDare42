@@ -9,79 +9,50 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1367740619929836}
+  m_RootGameObject: {fileID: 1092447659724240}
   m_IsPrefabAsset: 1
---- !u!1 &1367740619929836
+--- !u!1 &1092447659724240
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4668395727194376}
+  - component: {fileID: 4342690171105930}
+  - component: {fileID: 114558455032760592}
+  - component: {fileID: 114913522449764326}
+  - component: {fileID: 212763362206557138}
+  - component: {fileID: 95249796419354324}
   m_Layer: 0
-  m_Name: PlayerExit
+  m_Name: TeleBallDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1451364358679320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4216615772011312}
-  - component: {fileID: 114703190376187794}
-  - component: {fileID: 212039194003172800}
-  - component: {fileID: 95155898160793318}
-  - component: {fileID: 114382373307027164}
-  m_Layer: 0
-  m_Name: PlayerRender
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4216615772011312
+--- !u!4 &4342690171105930
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1451364358679320}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.31, z: -0.40090397}
+  m_GameObject: {fileID: 1092447659724240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4668395727194376}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4668395727194376
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367740619929836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.77, y: -2.4135091, z: 0.40090397}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4216615772011312}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95155898160793318
+--- !u!95 &95249796419354324
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1451364358679320}
+  m_GameObject: {fileID: 1092447659724240}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9dd84281e69f77b4e83f15b23d6108dd, type: 2}
+  m_Controller: {fileID: 9100000, guid: e33718ca7e63345fa874f4ed4a1d17ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -90,37 +61,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114382373307027164
+--- !u!114 &114558455032760592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1451364358679320}
+  m_GameObject: {fileID: 1092447659724240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171fd35c4b9104f2495ef8c8b7276196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationName: ExplodingTeleBall
+--- !u!114 &114913522449764326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092447659724240}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e2335d8d154efe4eac776a37b1cd15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
-  destroyParent: 1
---- !u!114 &114703190376187794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1451364358679320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171fd35c4b9104f2495ef8c8b7276196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: TeleportOut
---- !u!212 &212039194003172800
+  destroyParent: 0
+--- !u!212 &212763362206557138
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1451364358679320}
+  m_GameObject: {fileID: 1092447659724240}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -150,12 +121,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0104c7e53e766c0459e581475ded669c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc5d1e202729d47e1a0a6bb0fc6b741b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

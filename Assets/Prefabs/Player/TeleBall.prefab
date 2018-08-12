@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575a6325040b742909a24e23edfe4088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: 4668395727194376, guid: c34b10903c5301f4482461f9eec6046c, type: 2}
+  Spawn: {fileID: 4342690171105930, guid: 72196b92e442c46988b8580480a0fafb, type: 2}
   shouldSpawn: 1
   OnSpawn:
     m_PersistentCalls:
