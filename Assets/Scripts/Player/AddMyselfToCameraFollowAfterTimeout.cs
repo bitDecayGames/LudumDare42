@@ -1,20 +1,28 @@
 ﻿using UnityEngine;
 
 namespace Player {
-	public class AddMyselfToCameraFollow : MonoBehaviour {
+	public class AddMyselfToCameraFollowAfterTimeout : MonoBehaviour {
+		public float Timeout;
 		public bool isDefaultFollow = false;
 		
 		private CameraController cam;
 		private bool added = false;
+		private float _timeout;
 		
 		void OnEnable() {
 			if (!added) {
 				cam = Camera.main.GetComponent<CameraController>();
 				if (cam != null) {
-					if (isDefaultFollow) cam.DefaultFollowTransform = transform;
-					else cam.FollowTransform.Add(transform);
-					added = true;
+					_timeout = Timeout;
+					
 				}
+			}
+		}
+
+		void Update() {
+			if (!added) {
+				if (_timeout < 0) Add();
+				else _timeout -= Time.deltaTime;
 			}
 		}
 
@@ -24,6 +32,12 @@ namespace Player {
 
 		private void OnDestroy() {
 			Remove();
+		}
+
+		private void Add() {
+			if (isDefaultFollow) cam.DefaultFollowTransform = transform;
+			else cam.FollowTransform.Add(transform);
+			added = true;
 		}
 
 		private void Remove() {

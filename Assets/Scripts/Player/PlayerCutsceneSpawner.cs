@@ -41,12 +41,8 @@ namespace Player
 
         public void startSequence()
         {
+            transform.Find("CamFollow").gameObject.SetActive(true);
             currentState = SpawnState.START;
-            cam = Camera.main.GetComponent<CameraController>();
-            if (cam != null)
-            {
-                cam.FollowTransform.Add(transform);
-            }
         }
 
         private void OnDestroy()
