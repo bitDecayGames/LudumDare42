@@ -9,7 +9,7 @@ namespace Player {
 
 		private float _timeLimit;
 		
-		void Start () {
+		void OnEnable() {
 			_timeLimit = TimeLimit;
 		}
 	

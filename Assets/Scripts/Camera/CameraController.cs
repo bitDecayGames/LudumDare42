@@ -4,6 +4,7 @@ using UnityEngine;
 public partial class CameraController : MonoBehaviour
 {
     public List<Transform> FollowTransform;
+    public Transform DefaultFollowTransform;
 
     private const float SmoothTime = .5f;
     private const float DefaultZoom = 6f;
@@ -51,8 +52,8 @@ public partial class CameraController : MonoBehaviour
 
     private Vector3 calculateCentroid()
     {
-        if (FollowTransform.Count <= 0)
-        {
+        if (FollowTransform.Count <= 0) {
+            if (DefaultFollowTransform != null && DefaultFollowTransform) return DefaultFollowTransform.position;
             return transform.position;
         }
         var centroid = new Vector3(0, 0, 0);
