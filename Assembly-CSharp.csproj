@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Player\SpawnOnDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\TeleportToThing.cs" />
     <Compile Include="Assets\Scripts\Shaders\BlackHoleEffect.cs" />
+    <Compile Include="Assets\Scripts\Shaders\BrownHoleEffect.cs" />
+    <None Include="Assets\Shaders\BrownHoleShader.shader" />
     <None Include="Assets\Shaders\BlackHoleShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/mwingfield/Documents/LudumDare42/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
