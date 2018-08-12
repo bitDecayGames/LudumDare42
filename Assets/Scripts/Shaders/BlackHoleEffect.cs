@@ -40,8 +40,8 @@ public class BlackHoleEffect : MonoBehaviour {
 		}
 	}
 
-	private void OnRenderImage(RenderTexture src, RenderTexture dest) {
-		if (blackHoleShader && material) {
+	void OnRenderImage(RenderTexture src, RenderTexture dest) {
+		if (blackHole && blackHoleShader && material) {
 			wtsp = cam.WorldToScreenPoint(blackHole.position);
 			pos = new Vector2(wtsp.x / cam.pixelWidth, wtsp.y / cam.pixelHeight);
 			material.SetVector("_Position", pos);
@@ -51,6 +51,6 @@ public class BlackHoleEffect : MonoBehaviour {
 			material.SetFloat("_Distance", distance);
 			
 			Graphics.Blit(src, dest, material);
-		}
+		} else Graphics.Blit(src, dest);
 	}
 }
