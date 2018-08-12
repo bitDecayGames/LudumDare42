@@ -2,14 +2,16 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
 [LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=11008 (96768), maxchannels=1024, flags=0x00030000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=44100, nAvgBytesPerSec=1411200, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
+[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000052866298 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000052862148 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -24,63 +26,93 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] SystemI::createSound                     : filename = Assets\FMOD\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000005589CC58 : node = 000000001AC18D60
+[LOG] SystemI::createSound                     : setdata soundi = 000000005595A548 : node = 000000001AC19000
 [LOG] SystemI::createSound                     : add node to async list : head = 00000000481AEAD8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005595A548
 [LOG] SystemI::createSound                     : filename = Assets\FMOD\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005589CC58
-[LOG] SystemI::createSound                     : setdata soundi = 000000005589D168 : node = 000000001AC18EB0
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000481AEAD8.  list count = 0
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4583776
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17760
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005595A6F8 : node = 000000001AC18AC0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7888672
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000481AEAD8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23040
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001AC18E78
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001AC19118
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005595A1E8 : node = 000000001AC18C10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000481AEAD8.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005595A398 : node = 000000001AC18EB0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000481AEAD8.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SimpleSerious-Breathing', format=2, channels=2, frequency=48000, lengthbytes=680768, lengthpcm=3101768, pcmblocksize=0, loopstart=0, loopend=3101536, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.036743.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005595A548
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005595A6F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7888672
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23040
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001AC18BD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SpaceAmbience-NoBass', format=2, channels=2, frequency=48000, lengthbytes=1092160, lengthpcm=3830076, pcmblocksize=0, loopstart=0, loopend=3550152, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.039764.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005589CC58
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005589D168
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SimpleSerious-NoDrums-NoAmbientBass', format=2, channels=2, frequency=48000, lengthbytes=1040512, lengthpcm=2927769, pcmblocksize=0, loopstart=0, loopend=2835691, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.221649.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005595A6F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005595A1E8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4583776
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17760
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7888672
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23040
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001AC18D28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SimpleSerious-Drums', format=2, channels=2, frequency=48000, lengthbytes=760672, lengthpcm=2917845, pcmblocksize=0, loopstart=0, loopend=2835690, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.140076.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005595A1E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005595A398
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7888672
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23040
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001AC18FC8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SpaceAmbience-BassOnly', format=2, channels=2, frequency=48000, lengthbytes=1016128, lengthpcm=4113461, pcmblocksize=0, loopstart=0, loopend=3550152, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064453.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005589D168
-[LOG] SoundI::getSubSound                      : sound 000000005589CC58.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SimpleSerious-AmbientBass', format=2, channels=2, frequency=48000, lengthbytes=820672, lengthpcm=3125076, pcmblocksize=0, loopstart=0, loopend=2835691, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.753357.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005595A398
+[LOG] SoundI::getSubSound                      : sound 000000005595A548.  Subsound index 0 / 1
 [LOG] SoundI::getSubSound                      : starting non blocking seek and setting sound to not ready state
 [LOG] SoundI::getSubSound                      : finished preparing nonblocking getSubSound seek
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000047F5AC98
-[LOG] SoundI::getSubSound                      : sound 000000005589D168.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000056258268
+[LOG] SoundI::getSubSound                      : sound 000000005595A6F8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     starting non blocking seek and setting sound to not ready state
+[LOG] SoundI::getSubSound                      :     finished preparing nonblocking getSubSound seek
+[LOG] SoundI::getSubSound                      :     sound 000000005595A1E8.  Subsound index 0 / 1
 [LOG] AsyncThread::threadFunc                  :     done setposition
 [LOG] SoundI::getSubSound                      :     starting non blocking seek and setting sound to not ready state
 [LOG] SoundI::getSubSound                      :     finished preparing nonblocking getSubSound seek
+[LOG] SoundI::getSubSound                      :     sound 000000005595A398.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     starting non blocking seek and setting sound to not ready state
+[LOG] SoundI::getSubSound                      :     finished preparing nonblocking getSubSound seek
 [LOG] AsyncThread::threadFunc                  :     done flush
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000047F5AC98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000047F5AFF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000056258268
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000562580B8
 [LOG] AsyncThread::threadFunc                  :     done setposition
 [LOG] AsyncThread::threadFunc                  :     done flush
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000047F5AFF8
-[LOG] SoundI::release                          : SpaceAmbience-BassOnly (000000005589D168)
-[LOG] SoundI::release                          :     SpaceAmbience-BassOnly (00000000481AEB28)
-[LOG] SoundI::release                          :     SpaceAmbience-BassOnly (0000000047F5AFF8)
-[LOG] SoundI::release                          : SpaceAmbience-NoBass (000000005589CC58)
-[LOG] SoundI::release                          :     SpaceAmbience-NoBass (00000000481AF1A8)
-[LOG] SoundI::release                          :     SpaceAmbience-NoBass (0000000047F5AC98)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000562580B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000056257D58
+[LOG] AsyncThread::threadFunc                  :     done setposition
+[LOG] AsyncThread::threadFunc                  :     done flush
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000056257D58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000056257F08
+[LOG] AsyncThread::threadFunc                  :     done setposition
+[LOG] AsyncThread::threadFunc                  :     done flush
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000056257F08

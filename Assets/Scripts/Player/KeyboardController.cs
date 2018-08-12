@@ -7,12 +7,25 @@ public class KeyboardController : MonoBehaviour
     private float _frequencyRange = 1f;
     private float _speedMultiplier = 5;
     public GameObject BlackHole;
+    public GameObject MusicGameObject;
 
+    private MainMusicController _musicController;
+    
     private void Start()
     {
         if (BlackHole == null)
         {
             throw new Exception("BlackHole game object not assigned in editor");
+        }
+        if (MusicGameObject == null)
+        {
+            throw new Exception("MusicController game object not assigned in editor");
+        }
+
+        _musicController = MusicGameObject.GetComponent<MainMusicController>();
+        if (_musicController == null)
+        {
+            throw new Exception("MusicController not found on MusicGameObject");
         }
     }
 
@@ -33,9 +46,35 @@ public class KeyboardController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var blackHoleController = gameObject.AddComponent<GetSuckedIntoBlackHoleController>();
-        blackHoleController.SetBlackHole(BlackHole);
-        Destroy(this);
+        if (other.name.Equals("BlackHole"))
+        {
+            var blackHoleController = gameObject.AddComponent<GetSuckedIntoBlackHoleController>();
+            blackHoleController.SetBlackHole(BlackHole);
+            Destroy(this);
+        }
+        
+        if (other.gameObject.name.Equals("EndTrigger"))
+        {        
+            _musicController.SetEndTrigger(0);
+        }
+        
+        if (other.gameObject.name.Equals("FadeOut"))
+        {        
+            _musicController.SetFadeOut(0);
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name.Equals("EndTrigger"))
+        {        
+            _musicController.SetEndTrigger(1);
+        }
+        
+        if (other.gameObject.name.Equals("FadeOut"))
+        {        
+            _musicController.SetFadeOut(1);
+        }
     }
 
     private void CheckForAudioSweep()
