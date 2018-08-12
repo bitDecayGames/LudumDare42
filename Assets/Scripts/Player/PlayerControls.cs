@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
+using System;
+using UnityEngine.Events;
 
 namespace Player
 {
     public class PlayerControls : MonoBehaviour
     {
+        [Serializable]
+        public class TeleportEvent : UnityEvent<Vector3>
+        {
+
+        }
 
         public const int AIM_PHASE = 0;
         public const int TELE_PHASE = 1;
@@ -11,6 +18,8 @@ namespace Player
         public Rigidbody2D TeleBallPrefab;
         public Rigidbody2D TeleBallPredictorPrefab;
         public Transform PlayerExitPrefab;
+
+        public TeleportEvent onTeleport;
 
         private int phase = AIM_PHASE;
 
@@ -39,10 +48,12 @@ namespace Player
                         shooter.Shoot(TeleBallPredictorPrefab);
                         GetComponentInChildren<Animator>().Play("Aim");
                     }
-                    else if (Input.GetMouseButtonDown(0)) {
+                    else if (Input.GetMouseButtonDown(0))
+                    {
                         startAiming = true;
                     }
-                    else if (Input.GetMouseButtonUp(0) && startAiming) {
+                    else if (Input.GetMouseButtonUp(0) && startAiming)
+                    {
                         startAiming = false;
                         // TODO: shoot at mouse
                         foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
@@ -56,7 +67,8 @@ namespace Player
                     }
                     break;
                 case TELE_PHASE:
-                    if (teleBallRef == null || !teleBallRef.gameObject.activeSelf) {
+                    if (teleBallRef == null || !teleBallRef.gameObject.activeSelf)
+                    {
                         phase = AIM_PHASE;
                         teleBallRef = null;
                         shooter.canShoot = true;
@@ -123,6 +135,7 @@ namespace Player
                 teleBallRef.transform.position = teleBallRef.position + adjustment;
 
                 teleporter.Teleport(teleBallRef);
+                onTeleport.Invoke(teleBallRef.position);
                 teleBallRef.GetComponent<SpawnOnDestroy>().shouldSpawn = false;
                 Destroy(teleBallRef.gameObject);
                 teleBallRef = null;

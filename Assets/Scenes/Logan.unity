@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4200735779955316, guid: 7cf0ce718a5a7496f9fbc861943fe1ab, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.53
@@ -151,6 +156,31 @@ Prefab:
     - target: {fileID: 4200735779955316, guid: 7cf0ce718a5a7496f9fbc861943fe1ab, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 571375571}
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setWarpPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 114079359774351718, guid: 7cf0ce718a5a7496f9fbc861943fe1ab,
+        type: 2}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf0ce718a5a7496f9fbc861943fe1ab, type: 2}
@@ -197,6 +227,29 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6653c78a0a6774dbea4b477ffcf5166b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &571375565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1419576526775924, guid: ec030b0466d0615459f22dc92b4c498a,
+    type: 2}
+  m_PrefabInternal: {fileID: 852003917}
+--- !u!114 &571375571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571375565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7808a289d72ad046b068dbd72da4f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 59ef9655c6824c847a2f2984334a679b, type: 3}
+  ratio: 0
+  warpPoint: {x: 0, y: 0, z: 0}
+  radius: 0
+  waveThickness: 0.15
+  waveSpeed: 0.02
+  distortion: 0.017
 --- !u!1001 &852003917
 Prefab:
   m_ObjectHideFlags: 0
@@ -246,6 +299,11 @@ Prefab:
       propertyPath: FollowTransform.Array.data[0]
       value: 
       objectReference: {fileID: 1251641604}
+    - target: {fileID: 114237994872971094, guid: ec030b0466d0615459f22dc92b4c498a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec030b0466d0615459f22dc92b4c498a, type: 2}
   m_IsPrefabAsset: 0
