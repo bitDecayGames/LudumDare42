@@ -16,7 +16,7 @@ Shader "Hidden/BlackHoleShader"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			//#pragma fragmentoption ARB_precision_hint_fastest
+			#pragma fragmentoption ARB_precision_hint_fastest
 			
 			#include "UnityCG.cginc"
 
