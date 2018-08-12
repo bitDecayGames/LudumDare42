@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 81518055151005166}
   - component: {fileID: 114186855702120256}
   - component: {fileID: 114907317647075540}
+  - component: {fileID: 114076969567561746}
   m_Layer: 0
   m_Name: CustomCamera
   m_TagString: MainCamera
@@ -231,6 +232,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1419576526775924}
   m_Enabled: 1
+--- !u!114 &114076969567561746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419576526775924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7808a289d72ad046b068dbd72da4f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 59ef9655c6824c847a2f2984334a679b, type: 3}
+  ratio: 0
+  warpPoint: {x: 0, y: 0, z: 0}
+  radius: 0
+  waveThickness: 0.075
+  waveSpeed: 0.0265
+  distortion: 1.26
 --- !u!114 &114186855702120256
 MonoBehaviour:
   m_ObjectHideFlags: 1

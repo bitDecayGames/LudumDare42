@@ -227,29 +227,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6653c78a0a6774dbea4b477ffcf5166b, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &571375565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1419576526775924, guid: ec030b0466d0615459f22dc92b4c498a,
+--- !u!114 &571375571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114076969567561746, guid: ec030b0466d0615459f22dc92b4c498a,
     type: 2}
   m_PrefabInternal: {fileID: 852003917}
---- !u!114 &571375571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 571375565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7808a289d72ad046b068dbd72da4f36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 59ef9655c6824c847a2f2984334a679b, type: 3}
-  ratio: 0
-  warpPoint: {x: 0, y: 0, z: 0}
-  radius: 0
-  waveThickness: 0.15
-  waveSpeed: 0.02
-  distortion: 0.017
 --- !u!1001 &852003917
 Prefab:
   m_ObjectHideFlags: 0
@@ -294,16 +277,6 @@ Prefab:
       propertyPath: Follow
       value: 
       objectReference: {fileID: 1251641604}
-    - target: {fileID: 114186855702120256, guid: ec030b0466d0615459f22dc92b4c498a,
-        type: 2}
-      propertyPath: FollowTransform.Array.data[0]
-      value: 
-      objectReference: {fileID: 1251641604}
-    - target: {fileID: 114237994872971094, guid: ec030b0466d0615459f22dc92b4c498a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec030b0466d0615459f22dc92b4c498a, type: 2}
   m_IsPrefabAsset: 0
