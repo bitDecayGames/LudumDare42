@@ -9,11 +9,14 @@ namespace Player {
 	
 		public Transform Spawn;
 		public bool shouldSpawn = true;
+		public bool shareParent = false;
 		public OnSpawnEvent OnSpawn;
 
 		private void OnDestroy() {
 			if (shouldSpawn) {
-				var spawn = Instantiate(Spawn);
+				Transform spawn;
+				if (shareParent) spawn = Instantiate(Spawn, transform.parent);
+				else spawn = Instantiate(Spawn);
 				spawn.position = transform.position;
 				spawn.rotation = transform.rotation;
 				OnSpawn.Invoke(spawn);
