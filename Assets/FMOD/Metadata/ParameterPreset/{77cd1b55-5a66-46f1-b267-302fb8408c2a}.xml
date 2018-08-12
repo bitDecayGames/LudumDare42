@@ -12,14 +12,17 @@
         </relationship>
     </object>
     <object class="GameParameter" id="{bc62e793-77dd-4205-b12a-e21d7a1d2c57}">
+        <property name="minimum">
+            <value>5</value>
+        </property>
         <property name="maximum">
-            <value>10</value>
+            <value>15</value>
         </property>
         <property name="initialValue">
-            <value>10</value>
+            <value>15</value>
         </property>
-        <property name="seekSpeedDescending">
-            <value>3.9999997615814209</value>
+        <property name="seekSpeed">
+            <value>6.0999994277954102</value>
         </property>
         <property name="seekSpeedAsymmetric">
             <value>true</value>

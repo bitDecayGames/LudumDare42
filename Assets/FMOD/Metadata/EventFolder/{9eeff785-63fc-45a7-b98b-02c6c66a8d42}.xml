@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{9eeff785-63fc-45a7-b98b-02c6c66a8d42}">
+        <property name="name">
+            <value>ArcadeTheme</value>
+        </property>
+        <relationship name="folder">
+            <destination>{18881e4c-8019-40b6-82cb-08a7c9adb1fc}</destination>
+        </relationship>
+    </object>
+</objects>

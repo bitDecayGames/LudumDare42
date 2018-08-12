@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{0896fe1a-1f99-48dc-a87b-8ad449b82c76}">
+        <property name="name">
+            <value>FadeOut</value>
+        </property>
+        <relationship name="folder">
+            <destination>{1dbfbd20-9981-438a-8855-0e3c18f36fe3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{f547db60-dcb0-4540-b022-036bba857d11}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{f547db60-dcb0-4540-b022-036bba857d11}">
+        <property name="initialValue">
+            <value>1</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.90000003576278687</value>
+        </property>
+        <property name="seekSpeedDescending">
+            <value>0.31000003218650818</value>
+        </property>
+        <property name="seekSpeedAsymmetric">
+            <value>true</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>
