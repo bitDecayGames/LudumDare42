@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 
-public class BlackHoleEffect : MonoBehaviour {
+public class BrownHoleEffect : MonoBehaviour {
 
-	public Shader blackHoleShader;
-	public Transform blackHole;
-	[Range(-3f, .4f)]
-	public float radius;
-	[Range(0.1f, 3f)]
-	public float distance;
-	[Range(0, 20)]
-	public float black;
+	public Shader brownHoleShader;
+	public Transform brownHole;
+	public float radius = .5f;
+	public float black = .5f;
 
 	[HideInInspector]
 	public float ratio;
@@ -22,7 +18,7 @@ public class BlackHoleEffect : MonoBehaviour {
 	public Material material {
 		get {
 			if (_material == null) {
-				_material = new Material(blackHoleShader);
+				_material = new Material(brownHoleShader);
 				_material.hideFlags = HideFlags.DontSave;
 			}
 			return _material;
@@ -41,14 +37,13 @@ public class BlackHoleEffect : MonoBehaviour {
 	}
 
 	void OnRenderImage(RenderTexture src, RenderTexture dest) {
-		if (blackHole && blackHoleShader && material) {
-			wtsp = cam.WorldToScreenPoint(blackHole.position);
+		if (brownHole && brownHoleShader && material) {
+			wtsp = cam.WorldToScreenPoint(brownHole.position);
 			pos = new Vector2(wtsp.x / cam.pixelWidth, wtsp.y / cam.pixelHeight);
-			material.SetVector("_Position", pos);
+			material.SetVector("_HolePosition", pos);
 			material.SetFloat("_Ratio", ratio);
 			material.SetFloat("_Radius", radius);
 			material.SetFloat("_Black", black);
-			material.SetFloat("_Distance", distance);
 			
 			Graphics.Blit(src, dest, material);
 		} else Graphics.Blit(src, dest);
