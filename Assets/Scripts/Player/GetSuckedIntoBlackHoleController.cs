@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GetSuckedIntoBlackHoleController : MonoBehaviour
 {
-    private static float BlackHoleSuckingSpeed = 1.5f;
+    private static float BlackHoleSuckingSpeed = 0.5f;
     private float deathAnimationTimer = 6f;
     
     private GameObject _blackHole;
