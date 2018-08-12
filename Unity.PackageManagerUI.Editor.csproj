@@ -382,6 +382,9 @@
     <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackagesLoading.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\BlackHoleShader.shader" />
+    <None Include="Assets\Shaders\BrownHoleShader.shader" />
+    <None Include="Assets\Shaders\WarpShader.shader" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
