@@ -1,6 +1,5 @@
 ﻿using System;
 using Player;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +13,7 @@ public class GameEndCutscene : MonoBehaviour {
 	public SpriteRenderer FadeToBlack;
 	public Rigidbody2D FakeTeleBall;
 	public CreditMetadata CreditMetadataPrefab;
-	public AnimatorController EndPlayerAnimator;
+	public RuntimeAnimatorController EndPlayerAnimator;
 
 	private PlayerControls player;
 	private CameraController cam;
