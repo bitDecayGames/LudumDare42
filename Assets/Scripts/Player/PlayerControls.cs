@@ -12,20 +12,30 @@ namespace Player
 
         }
 
+        [Serializable]
+        public class TeleBallActiveEvent : UnityEvent<bool>
+        {
+
+        }
+
         public const int AIM_PHASE = 0;
         public const int TELE_PHASE = 1;
+        public const int DEATH_PHASE = 2;
+        public const int DISABLED_PHASE = 3;
 
         public Rigidbody2D TeleBallPrefab;
         public Rigidbody2D TeleBallPredictorPrefab;
         public Transform PlayerExitPrefab;
 
         public TeleportEvent onTeleport;
+        public TeleBallActiveEvent onBallActive;
 
         private int phase = AIM_PHASE;
 
         private ShootAtMouse shooter;
         private TeleportToThing teleporter;
         private Transform teleBallRef;
+        private ChildAnimationController teleBallRefAnim;
 
         private Collision2D currentCollision;
         private bool teleBallPositionIsValid = false;
@@ -74,26 +84,58 @@ namespace Player
                     {
                         phase = AIM_PHASE;
                         teleBallRef = null;
+                        teleBallRefAnim = null;
                         shooter.canShoot = true;
                         teleBallPositionIsValid = false;
                     }
                     else if (Input.GetMouseButton(0))
                     {
                         // TODO: allow physics to proceed?
+                        if (teleBallRef)
+                        {
+                            teleBallRefAnim.SetOn(false);
+                        }
 
                     }
-                    else if (teleBallPositionIsValid)
+                    else
                     {
-                        // TODO: teleport once position on teleBall is valid
-                        TeleportToBall();
+                        if (teleBallRef)
+                        {
+                            teleBallRefAnim.SetOn(true);
+                        }
+                        if (teleBallPositionIsValid)
+                        {
+                            // TODO: teleport once position on teleBall is valid
+                            TeleportToBall();
+                        }
                     }
                     break;
+
+            }
+        }
+
+        public void Die() {
+            phase = DEATH_PHASE;
+            GetComponentInChildren<Animator>().Play("Death");
+            DestroyActiveTeleBall();
+        }
+
+        public void SetPlayerPhase(int phase) {
+            this.phase = phase;
+        }
+
+        public void DestroyActiveTeleBall() {
+            if (teleBallRef) {
+                shooter.canShoot = true;
+                Destroy(teleBallRef.gameObject);
             }
         }
 
         public void OnShoot(Transform shot)
         {
+
             teleBallRef = shot;
+            teleBallRefAnim = teleBallRef.GetComponent<ChildAnimationController>();
             var collideAlert = teleBallRef.GetComponent<CollideAlert>();
             if (collideAlert != null)
             {
