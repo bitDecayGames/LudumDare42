@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{407ed436-2f84-42f2-a560-70bbc9cc5e0b}">
+        <property name="name">
+            <value>FadeSong</value>
+        </property>
+        <relationship name="folder">
+            <destination>{1dbfbd20-9981-438a-8855-0e3c18f36fe3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{432e0e19-9b6c-4112-9aa1-70f2849c9902}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{432e0e19-9b6c-4112-9aa1-70f2849c9902}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.20000001788139343</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>

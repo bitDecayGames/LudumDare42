@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class DestroyAfterAnimation : MonoBehaviour
 {
@@ -17,5 +18,10 @@ public class DestroyAfterAnimation : MonoBehaviour
         if (destroyParent) obj = transform.parent.gameObject;
         var anim = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
         Destroy(obj, anim.length + delay);
+    }
+
+    public void ExplosionNoise()
+    {
+        RuntimeManager.PlayOneShot("event:/SFX/Ball/Explode/Explode");
     }
 }

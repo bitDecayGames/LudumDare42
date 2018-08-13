@@ -40,6 +40,11 @@ public class MainMusicController : MonoBehaviour
         _crystalAmbienceEvent = FMODUnity.RuntimeManager.CreateInstance(_crystalAmbience);
         _crystalAmbienceEvent.start();
     }
+
+    public void FadeOutAmbientSong()
+    {
+        _ambientMusicEvent.setParameterValue("FadeSong", 1);
+    }
     
     private void Update()
     {
