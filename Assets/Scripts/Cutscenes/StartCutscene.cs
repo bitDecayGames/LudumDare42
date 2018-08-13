@@ -25,6 +25,9 @@ public class StartCutscene : MonoBehaviour
 
     private PlayerControls player;
     private bool started = false;
+
+    private bool _speedingup;
+    private float _timeSpentSpeedingUp;
     
     void Start() {
         if (!CutscenePrefab) throw new Exception("Need to link to the cutscene prefab (rotoscope animation object)");
@@ -34,6 +37,25 @@ public class StartCutscene : MonoBehaviour
         if (!CrystalRoomAnimator) throw new Exception("Need to link to an animator for the crystal room animation");
         if (!BlackHoleGrowerPrefab) throw new Exception("Need to link a black hole grower prefab");
         CutsceneIsPlaying = true;
+    }
+
+    private void Update()
+    {
+        if (_speedingup)
+        {
+            
+            _timeSpentSpeedingUp += Time.deltaTime;
+
+            if (_timeSpentSpeedingUp < 2f)
+            {
+                CrystalRoomAnimator.speed += .0003f;
+            }
+            else
+            {
+                CrystalRoomAnimator.speed += .01f;
+            }
+            
+        }
     }
 
     public void StartBrokenPanelRotoscope() {
@@ -58,17 +80,20 @@ public class StartCutscene : MonoBehaviour
         StartSpeedingCrystal();
     }
 
-    public void StartSpeedingCrystal() {
+    public void StartSpeedingCrystal()
+    {
+        _speedingup = true;
         GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().SpeedUpCrystal();
         originalAnimatorSpeed = CrystalRoomAnimator.speed;
-        CrystalRoomAnimator.speed *= 4;
         var timer = Instantiate(DestroyTimer, transform);
         timer.TimeLimit = 12;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndSpeedingCrystal);
     }
 
-    public void EndSpeedingCrystal(Transform t) {
+    public void EndSpeedingCrystal(Transform t)
+    {
+        _speedingup = false;
         CrystalRoomAnimator.speed = originalAnimatorSpeed;
         RuntimeManager.PlayOneShot("event:/SFX/Explosions/CrystalExplosion");
         GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StopCrystalSound();
