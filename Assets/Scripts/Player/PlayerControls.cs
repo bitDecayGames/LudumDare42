@@ -115,7 +115,6 @@ namespace Player
                         if (teleBallRef)
                         {
                             teleBallRefAnim.SetOn(true);
-                            Debug.Log("Setting Active to true");
                             _haloEvent.setParameterValue("Active", 1);
                         }
                         if (teleBallPositionIsValid)

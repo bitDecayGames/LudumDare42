@@ -1,5 +1,6 @@
 ﻿using System;
 using Player;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class GameEndCutscene : MonoBehaviour {
 	public SpriteRenderer FadeToBlack;
 	public Rigidbody2D FakeTeleBall;
 	public CreditMetadata CreditMetadataPrefab;
+	public AnimatorController EndPlayerAnimator;
 
 	private PlayerControls player;
 	private CameraController cam;
@@ -69,7 +71,9 @@ public class GameEndCutscene : MonoBehaviour {
 				waitTimeMS = 6000;
 				cam.InitiateScreenShake(waitTimeMS / 1000f, .06f);
 				// turn left, turn right, turn left, turn right, go to throw
-				player.GetComponentInChildren<Animator>().Play("EndCutscene");
+				var animator = player.GetComponentInChildren<Animator>();
+				animator.runtimeAnimatorController = EndPlayerAnimator;
+				animator.Play("EndCutscene");
 				// TODO: Tanner: getting nervous, about to throw the ball
 				break;
 			case 3:
