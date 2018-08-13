@@ -15310,11 +15310,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
-        type: 2}
-      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4984308895638496, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 184.51
@@ -15352,34 +15347,6 @@ Prefab:
       propertyPath: ForegroundCamera
       value: 
       objectReference: {fileID: 625292074}
-    - target: {fileID: 61326400007677700, guid: 3e6257bf8ec124582839de2e0b45fcd9,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.5766754
-      objectReference: {fileID: 0}
-    - target: {fileID: 61326400007677700, guid: 3e6257bf8ec124582839de2e0b45fcd9,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.055275
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210272036582662, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210272036582662, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
-        type: 2}
-      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
-        type: 2}
-      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
   m_IsPrefabAsset: 0
