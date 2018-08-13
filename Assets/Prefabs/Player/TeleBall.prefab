@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1250310474559468
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ Animator:
   m_GameObject: {fileID: 1104929822015094}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e33718ca7e63345fa874f4ed4a1d17ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: e1342b73811f31a4aaa85f2848c68813, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3295d1bfc82f0c34eb5d4e1cab325af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnAnimation: Halo
-  OffAnimation: StandardTeleBall
+  OnAnimation: HaloOn
+  OffAnimation: HaloOff
   play: 1
 --- !u!114 &114452067514868748
 MonoBehaviour:

@@ -56,7 +56,9 @@ public class BlackHoleController : MonoBehaviour
             blackHoleController.SetBlackHole(gameObject);
             other.gameObject.SendMessage("Die");
             Destroy(this);
-        }
+        } else if (other.name.ToLower().StartsWith("teleball")) {
+            Destroy(other.gameObject);
+        } else Debug.Log("Something unknown collided with the black hole: " + other.name);
     }
 
     private void Update()
@@ -83,7 +85,6 @@ public class BlackHoleController : MonoBehaviour
 
     private void LoadNextNode()
     {
-        Debug.Log("Loading in next node");
         _currentNode = _nodeQueue.Dequeue();
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{bf7804c9-af31-472f-b9c7-8ee6e6580d71}">
+        <property name="name">
+            <value>Speedup</value>
+        </property>
+        <relationship name="folder">
+            <destination>{1dbfbd20-9981-438a-8855-0e3c18f36fe3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{b38c6a7d-fce6-49e5-8e8d-21990295e1ab}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{b38c6a7d-fce6-49e5-8e8d-21990295e1ab}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>

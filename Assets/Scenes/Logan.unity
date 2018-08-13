@@ -681,7 +681,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1785667861
+--- !u!1001 &1839637130
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -719,6 +719,25 @@ Prefab:
     - target: {fileID: 4122635938974856, guid: 96d6b8752e20449ee8136d383858c516, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 95841853258979224, guid: 96d6b8752e20449ee8136d383858c516,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e1342b73811f31a4aaa85f2848c68813, type: 2}
+    - target: {fileID: 1104929822015094, guid: 96d6b8752e20449ee8136d383858c516, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249830996409208, guid: 96d6b8752e20449ee8136d383858c516,
+        type: 2}
+      propertyPath: OnAnimation
+      value: HaloOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249830996409208, guid: 96d6b8752e20449ee8136d383858c516,
+        type: 2}
+      propertyPath: OffAnimation
+      value: HaloOff
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96d6b8752e20449ee8136d383858c516, type: 2}
