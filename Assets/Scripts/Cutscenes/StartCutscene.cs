@@ -77,7 +77,6 @@ public class StartCutscene : MonoBehaviour {
     }
     
     public void StartBrokenCrystalRoom() {
-        Debug.Log("Play broken crystal room...");
         CrystalRoomAnimator.Play("BrokenCrystalRoomAnimation");
         var timer = Instantiate(DestroyTimer, transform);
         timer.TimeLimit = 5;
