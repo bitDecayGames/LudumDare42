@@ -22,6 +22,14 @@ public class DestroyAfterAnimation : MonoBehaviour
 
     public void ExplosionNoise()
     {
+        if (GameObject.Find("EventCutsceneTrigger") != null)
+        {
+            if (GameObject.Find("EventCutsceneTrigger").GetComponent<StartCutscene>().CutsceneIsPlaying)
+            {
+                return;
+            }
+        }
+
         RuntimeManager.PlayOneShot("event:/SFX/Ball/Explode/Explode");
     }
 }

@@ -4,8 +4,11 @@ using Player;
 using UnityEngine;
 using Object = System.Object;
 
-public class StartCutscene : MonoBehaviour {
+public class StartCutscene : MonoBehaviour
+{
 
+    public bool CutsceneIsPlaying;
+    
     public Canvas CutscenePrefab;
     public BlackHoleController BlackHolePrefab;
     public DestroyAfterTimeLimit DestroyTimer;
@@ -18,6 +21,7 @@ public class StartCutscene : MonoBehaviour {
     public BrownHoleEffect ForegroundCamera;
     
     private float originalAnimatorSpeed;
+    private BlackHoleGrower grower;
 
     private PlayerControls player;
     private bool started = false;
@@ -29,6 +33,7 @@ public class StartCutscene : MonoBehaviour {
         if (!BlackHoleSpawnPoint) throw new Exception("Need to link to a transform that marks where the black hole will initially spawn");
         if (!CrystalRoomAnimator) throw new Exception("Need to link to an animator for the crystal room animation");
         if (!BlackHoleGrowerPrefab) throw new Exception("Need to link a black hole grower prefab");
+        CutsceneIsPlaying = true;
     }
 
     public void StartBrokenPanelRotoscope() {
@@ -85,7 +90,7 @@ public class StartCutscene : MonoBehaviour {
     public void StartBrokenCrystalRoom() {
         CrystalRoomAnimator.Play("BrokenCrystalRoomAnimation");
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 5;
+        timer.TimeLimit = 1.5f;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndBrokenCrystalRoom);
     }
@@ -95,21 +100,32 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void StartBlackHole() {
-        var grower = Instantiate(BlackHoleGrowerPrefab);
+        RuntimeManager.PlayOneShot("event:/SFX/BlackHoleGrow/BlackHoleGrow");
+        grower = Instantiate(BlackHoleGrowerPrefab);
         grower.transform.position = BlackHoleSpawnPoint.position;
         ForegroundCamera.brownHole = grower.transform;
         grower.brownHole = ForegroundCamera;
-        grower.OnDoneGrowing.AddListener(EndBlackHoleInitialization);
+        grower.OnDoneGrowing.AddListener(DelayBlackHoleEnding);
         grower.StartGrowing();
     }
 
-    public void EndBlackHoleInitialization() {
+    public void DelayBlackHoleEnding()
+    {
+        var timer = Instantiate(DestroyTimer, transform);
+        timer.TimeLimit = 2;
+        timer.RefreshTimer();
+        timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndBlackHoleInitialization);
+    }
+    
+    public void EndBlackHoleInitialization(Transform t)
+    {
+        CutsceneIsPlaying = false;
+        Destroy(grower);
         GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StartActionMusic();
         var blackHole = Instantiate(BlackHolePrefab);
         blackHole.transform.position = BlackHoleSpawnPoint.position;
         blackHole.PathMarkers = PathMarkers;
         ForegroundCamera.brownHole = blackHole.transform;
-        
         player.SetPlayerPhase(PlayerControls.AIM_PHASE);
         Camera.main.GetComponent<CameraController>().DefaultFollowTransform = player.transform;
         Destroy(gameObject);

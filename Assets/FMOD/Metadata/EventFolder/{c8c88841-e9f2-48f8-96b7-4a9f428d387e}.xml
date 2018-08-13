@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{c8c88841-e9f2-48f8-96b7-4a9f428d387e}">
+        <property name="name">
+            <value>BlackHoleGrow</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2230e131-9812-4623-b940-bfc766021f3c}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -49,23 +49,17 @@
             <value>0.0041390728476821195</value>
         </property>
         <property name="uiLastHorizontalScrollBarValue">
-            <value>1789</value>
+            <value>1197</value>
         </property>
     </object>
     <object class="ParameterProxy" id="{57ba3a5a-581e-413f-bfc5-6b349301608c}">
         <property name="uiLastRulerScaleRatio">
-            <value>0.00082781456953642384</value>
-        </property>
-        <property name="uiLastHorizontalScrollBarValue">
-            <value>581</value>
+            <value>0.00082034454470877774</value>
         </property>
     </object>
     <object class="ParameterProxy" id="{c9df4d1e-6658-4aa4-b687-d0242c10059b}">
         <property name="uiLastRulerScaleRatio">
-            <value>0.00082781456953642384</value>
-        </property>
-        <property name="uiLastHorizontalScrollBarValue">
-            <value>581</value>
+            <value>0.00082034454470877774</value>
         </property>
     </object>
     <object class="EventMixerMaster" id="{c0a6de7f-c425-4243-98c8-04277f3cbbbe}">
