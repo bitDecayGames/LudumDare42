@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScrollScript : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ScrollScript : MonoBehaviour
 
         if (timePassed >= EndTime)
         {
-//            Debug.Log("DONE");
+            SceneManager.LoadScene("Game");
         }
     }
 }

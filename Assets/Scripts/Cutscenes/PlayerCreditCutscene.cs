@@ -35,6 +35,9 @@ public class PlayerCreditCutscene : MonoBehaviour
         if (cameFromTitle)
         {
             // TODO: Play other music(?)
+            var creditsMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/ClickCredits");
+            creditsMusic.start();
+            creditsMusic.release();
             Destroy(transform.parent.gameObject);
         }
         else

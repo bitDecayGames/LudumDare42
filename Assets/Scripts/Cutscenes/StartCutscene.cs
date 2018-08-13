@@ -37,7 +37,6 @@ public class StartCutscene : MonoBehaviour
         if (!BlackHoleSpawnPoint) throw new Exception("Need to link to a transform that marks where the black hole will initially spawn");
         if (!CrystalRoomAnimator) throw new Exception("Need to link to an animator for the crystal room animation");
         if (!BlackHoleGrowerPrefab) throw new Exception("Need to link a black hole grower prefab");
-        CutsceneIsPlaying = true;
     }
 
     private void Update()
@@ -60,6 +59,7 @@ public class StartCutscene : MonoBehaviour
     }
 
     public void StartBrokenPanelRotoscope() {
+        CutsceneIsPlaying = true;
         if (!started) {
             GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
             started = true;
