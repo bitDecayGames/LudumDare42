@@ -41,22 +41,31 @@
     </object>
     <object class="Timeline" id="{55bbc3ed-9fa9-44a9-b5da-8c8799b1385f}">
         <property name="uiLastRulerScaleRatio">
-            <value>0.061979820846660968</value>
+            <value>0.061420527959611525</value>
         </property>
     </object>
     <object class="ParameterProxy" id="{aeb912c8-ad21-46df-83c6-f96ab2ea94c2}">
         <property name="uiLastRulerScaleRatio">
             <value>0.0041390728476821195</value>
         </property>
+        <property name="uiLastHorizontalScrollBarValue">
+            <value>1789</value>
+        </property>
     </object>
     <object class="ParameterProxy" id="{57ba3a5a-581e-413f-bfc5-6b349301608c}">
         <property name="uiLastRulerScaleRatio">
             <value>0.00082781456953642384</value>
         </property>
+        <property name="uiLastHorizontalScrollBarValue">
+            <value>581</value>
+        </property>
     </object>
     <object class="ParameterProxy" id="{c9df4d1e-6658-4aa4-b687-d0242c10059b}">
         <property name="uiLastRulerScaleRatio">
             <value>0.00082781456953642384</value>
+        </property>
+        <property name="uiLastHorizontalScrollBarValue">
+            <value>581</value>
         </property>
     </object>
     <object class="EventMixerMaster" id="{c0a6de7f-c425-4243-98c8-04277f3cbbbe}">

@@ -1,7 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Splash {
-	public class SplashGoToGameScene : MonoBehaviour {
+	public class SplashGoToGameScene : MonoBehaviour
+	{
+		public FMOD.Studio.EventInstance titleScreenMusic;
+		
+		private void Start()
+		{
+			titleScreenMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/TitleScreen");
+			titleScreenMusic.start();
+			DontDestroyOnLoad(gameObject);
+		}
 
 		public void StartSplashScreenEvent() {
 			Debug.Log("start splash screen music here");
@@ -9,6 +19,9 @@ namespace Splash {
 
 		public void TightenBeltEvent() {
 			Debug.Log("Tighten belt noise here and possibly clothes ruffle?");
+			FMOD.Studio.EventInstance beltTightenEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Belt/BeltTighten");
+			beltTightenEvent.start();
+			beltTightenEvent.release();
 		}
 
 		public void BitDecayGamesImageEvent() {
@@ -17,6 +30,9 @@ namespace Splash {
 
 		public void HelmetStartSlidingOntoHeadEvent() {
 			Debug.Log("Shhhhh noise here");
+			FMOD.Studio.EventInstance helmetEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/HelmetApplication/HelmetApplication");
+			helmetEvent.start();
+			helmetEvent.release();
 		}
 
 		public void HelmetFitOnToHeadFullyEvent() {
@@ -37,6 +53,9 @@ namespace Splash {
 
 		public void HandOnBallEvent() {
 			Debug.Log("Maybe some sort of activation beeping?");
+			FMOD.Studio.EventInstance helmetEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/PickUpBall/PickUpBall");
+			helmetEvent.start();
+			helmetEvent.release();
 		}
 
 		public void ThinkingBeforeGameStartsEvent() {
@@ -45,7 +64,7 @@ namespace Splash {
 		
 		public void GoToGameScreenEvent() {
 			Debug.Log("Go to the game screen here");
-			//SceneManager.LoadScene("GameScene");
+			SceneManager.LoadScene("TitleScreen");
 		}
 	}
 }

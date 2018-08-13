@@ -11,7 +11,6 @@ public class MainMusicController : MonoBehaviour
     public Transform ProximityGameObjectTransform1;
     public Transform ProximityGameObjectTransform2;
 
-    private FMODUnity.StudioEventEmitter _eventEmitter;
     [FMODUnity.EventRef] private string _music = "event:/Music/ArcadeTheme/MainThemeAction";
     private FMOD.Studio.EventInstance musicEvent;
     
