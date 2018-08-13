@@ -21,17 +21,14 @@ public class BlinkController : MonoBehaviour
     {
         if (timer.timeLeft() < .75f)
         {
-            Debug.Log("ON");
             anim.Play("LightOnTeleBall");
         }
         else if (timer.timeLeft() < 2)
         {
-            Debug.Log("FASTING");
             anim.Play("FastBlinkTeleball");
         }
         else
         {
-            Debug.Log("SLOWING");
             anim.Play("SlowBlinkTeleBall");
         }
     }
