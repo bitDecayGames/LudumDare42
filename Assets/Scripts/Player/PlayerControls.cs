@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using FMODUnity;
 using UnityEngine.Events;
 
 namespace Player
@@ -77,6 +78,7 @@ namespace Player
                     {
                         startAiming = false;
                         // TODO: shoot at mouse
+                        
                         _haloEvent = FMODUnity.RuntimeManager.CreateInstance(_haloSoundPath);
                         _haloEvent.start();
                         foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
@@ -153,6 +155,7 @@ namespace Player
             {
                 collideAlert.OnCollideEnter.AddListener(TeleBallCollidedWithSomething);
                 collideAlert.OnCollideExit.AddListener(TeleBallStoppedCollidingWithSomething);
+                collideAlert.OnCollideStay.AddListener(TeleBallStillCollidingWithSomething);
             }
 
         }
@@ -170,8 +173,36 @@ namespace Player
             {
                 teleBallPositionIsValid = true;
             }
+
+            if (other.collider.bounciness <= 0)
+            {
+                RuntimeManager.PlayOneShot("event:/SFX/Ball/Landings/Squish");
+            }
+            else if (other.collider.bounciness >= 1)
+            {
+                RuntimeManager.PlayOneShot("event:/SFX/Ball/Landings/Metal");
+            }
+            else
+            {
+                RuntimeManager.PlayOneShot("event:/SFX/Ball/Landings/Dirt");
+            }
         }
 
+        private void TeleBallStillCollidingWithSomething(Collision2D other)
+        {
+            currentCollision = other;
+
+            // Do not collide with bad/corrupted tiles.
+            if (other.gameObject.tag == Tags.BadTiles)
+            {
+                teleBallPositionIsValid = false;
+            }
+            else
+            {
+                teleBallPositionIsValid = true;
+            }
+        }
+        
         private void TeleBallStoppedCollidingWithSomething(Collision2D other)
         {
             teleBallPositionIsValid = false;

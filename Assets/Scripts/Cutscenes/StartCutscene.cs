@@ -1,6 +1,7 @@
 using System;
 using Player;
 using UnityEngine;
+using Object = System.Object;
 
 public class StartCutscene : MonoBehaviour {
 
@@ -51,6 +52,7 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void StartSpeedingCrystal() {
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
         originalAnimatorSpeed = CrystalRoomAnimator.speed;
         CrystalRoomAnimator.speed *= 4;
         var timer = Instantiate(DestroyTimer, transform);
