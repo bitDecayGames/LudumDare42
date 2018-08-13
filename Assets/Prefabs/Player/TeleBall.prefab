@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1250310474559468
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114086517279027808}
   - component: {fileID: 95461102182796232}
   - component: {fileID: 114249830996409208}
+  - component: {fileID: 114909892760651372}
   m_Layer: 8
   m_Name: TeleBall
   m_TagString: Untagged
@@ -249,11 +250,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawn: {fileID: 4342690171105930, guid: 72196b92e442c46988b8580480a0fafb, type: 2}
   shouldSpawn: 1
+  shareParent: 0
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Player.SpawnOnDestroy+OnSpawnEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114909892760651372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250310474559468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632d22e7a9c7a6b4a90cd5a47b711c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212067194089873872
 SpriteRenderer:
   m_ObjectHideFlags: 1
