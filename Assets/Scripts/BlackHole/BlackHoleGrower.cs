@@ -41,7 +41,6 @@ public class BlackHoleGrower : MonoBehaviour {
 				brownHole.black = originalBlack * timerRatio;
 				if (isDone) {
 					OnDoneGrowing.Invoke();
-					Destroy(gameObject);
 				} 
 			}
 		}

@@ -1,10 +1,14 @@
 using System;
+using FMODUnity;
 using Player;
 using UnityEngine;
 using Object = System.Object;
 
-public class StartCutscene : MonoBehaviour {
+public class StartCutscene : MonoBehaviour
+{
 
+    public bool CutsceneIsPlaying;
+    
     public Canvas CutscenePrefab;
     public BlackHoleController BlackHolePrefab;
     public DestroyAfterTimeLimit DestroyTimer;
@@ -17,6 +21,7 @@ public class StartCutscene : MonoBehaviour {
     public BrownHoleEffect ForegroundCamera;
     
     private float originalAnimatorSpeed;
+    private BlackHoleGrower grower;
 
     private PlayerControls player;
     private bool started = false;
@@ -28,10 +33,12 @@ public class StartCutscene : MonoBehaviour {
         if (!BlackHoleSpawnPoint) throw new Exception("Need to link to a transform that marks where the black hole will initially spawn");
         if (!CrystalRoomAnimator) throw new Exception("Need to link to an animator for the crystal room animation");
         if (!BlackHoleGrowerPrefab) throw new Exception("Need to link a black hole grower prefab");
+        CutsceneIsPlaying = true;
     }
 
     public void StartBrokenPanelRotoscope() {
         if (!started) {
+            GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
             started = true;
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
             player.SetPlayerPhase(PlayerControls.DISABLED_PHASE);
@@ -52,26 +59,28 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void StartSpeedingCrystal() {
-        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().SpeedUpCrystal();
         originalAnimatorSpeed = CrystalRoomAnimator.speed;
         CrystalRoomAnimator.speed *= 4;
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 8;
+        timer.TimeLimit = 12;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndSpeedingCrystal);
     }
 
     public void EndSpeedingCrystal(Transform t) {
         CrystalRoomAnimator.speed = originalAnimatorSpeed;
+        RuntimeManager.PlayOneShot("event:/SFX/Explosions/CrystalExplosion");
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StopCrystalSound();
         CreateFlash();
     }
 
     public void CreateFlash() {
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 0.5f;
+        timer.TimeLimit = 2.5f;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndFlash);
-        Instantiate(WhiteFlashPrefab, timer.transform);
+        Instantiate(WhiteFlashPrefab);
     }
 
     public void EndFlash(Transform t) {
@@ -81,7 +90,7 @@ public class StartCutscene : MonoBehaviour {
     public void StartBrokenCrystalRoom() {
         CrystalRoomAnimator.Play("BrokenCrystalRoomAnimation");
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 5;
+        timer.TimeLimit = 1.5f;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndBrokenCrystalRoom);
     }
@@ -91,20 +100,32 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void StartBlackHole() {
-        var grower = Instantiate(BlackHoleGrowerPrefab);
+        RuntimeManager.PlayOneShot("event:/SFX/BlackHoleGrow/BlackHoleGrow");
+        grower = Instantiate(BlackHoleGrowerPrefab);
         grower.transform.position = BlackHoleSpawnPoint.position;
         ForegroundCamera.brownHole = grower.transform;
         grower.brownHole = ForegroundCamera;
-        grower.OnDoneGrowing.AddListener(EndBlackHoleInitialization);
+        grower.OnDoneGrowing.AddListener(DelayBlackHoleEnding);
         grower.StartGrowing();
     }
 
-    public void EndBlackHoleInitialization() {
+    public void DelayBlackHoleEnding()
+    {
+        var timer = Instantiate(DestroyTimer, transform);
+        timer.TimeLimit = 2;
+        timer.RefreshTimer();
+        timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndBlackHoleInitialization);
+    }
+    
+    public void EndBlackHoleInitialization(Transform t)
+    {
+        CutsceneIsPlaying = false;
+        Destroy(grower);
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StartActionMusic();
         var blackHole = Instantiate(BlackHolePrefab);
         blackHole.transform.position = BlackHoleSpawnPoint.position;
         blackHole.PathMarkers = PathMarkers;
         ForegroundCamera.brownHole = blackHole.transform;
-        
         player.SetPlayerPhase(PlayerControls.AIM_PHASE);
         Camera.main.GetComponent<CameraController>().DefaultFollowTransform = player.transform;
         Destroy(gameObject);
