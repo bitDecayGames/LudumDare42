@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61532900583684628}
   - component: {fileID: 114093865812700232}
   - component: {fileID: 114562434590083320}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: EventCutsceneTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

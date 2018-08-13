@@ -165,7 +165,15 @@ namespace Player
             teleBallPositionIsValid = false;
         }
 
-        private void TeleportToBall()
+        public void ForceMoveTeleBallToPosition(Vector3 position) {
+            if (teleBallRef != null && teleBallRef) teleBallRef.position = position;
+        }
+        
+        public void ForceTeleportToBall() {
+            TeleportToBall(true);
+        }
+
+        private void TeleportToBall(bool forced = false)
         {
             if (teleBallRef != null)
             {
@@ -185,6 +193,8 @@ namespace Player
                     adjustment.y = v2.y;
 
                     teleBallRef.transform.rotation = Quaternion.FromToRotation(Vector3.up, contactPoint.normal);
+                } else if (forced) {
+                    teleBallRef.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
 
                 teleBallRef.transform.position = teleBallRef.position + adjustment;
