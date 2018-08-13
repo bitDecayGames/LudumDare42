@@ -15,7 +15,15 @@ public class ChildAnimationController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        var animComps = GetComponentsInChildren<Animator>();
+        foreach (Animator a in animComps)
+        {
+            if (a.gameObject != gameObject)
+            {
+                anim = a;
+                break;
+            }
+        }
         previous = !play;
         Update();
     }
@@ -40,6 +48,7 @@ public class ChildAnimationController : MonoBehaviour
 
     public void SetOn(bool active)
     {
+        // Debug.Log("SETTING ANIMATION TO: " + active);
         play = active;
     }
 }
