@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554213c6abfae40deb503c79024ba5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLimit: 5
+  TimeLimit: 3
   MetricKey: BALL_TIME_OUT
 --- !u!114 &114249830996409208
 MonoBehaviour:

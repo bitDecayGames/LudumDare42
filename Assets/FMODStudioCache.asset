@@ -33,9 +33,12 @@ MonoBehaviour:
   - {fileID: 114645478032872432}
   - {fileID: 114443655836799496}
   - {fileID: 114671801678927256}
+  - {fileID: 114175727570437292}
+  - {fileID: 114912906844652406}
+  - {fileID: 114206465330978186}
   MasterBankRef: {fileID: 114370406013234814}
   StringsBankRef: {fileID: 114433523977865252}
-  stringsBankWriteTime: 636697162390000000
+  stringsBankWriteTime: 636697200340000000
   cacheVersion: 2
 --- !u!114 &114019219524041538
 MonoBehaviour:
@@ -172,6 +175,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0.99500006
+--- !u!114 &114037657099518704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Speedup
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114038878189377980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +683,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 403
+--- !u!114 &114175727570437292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ball/Beep/BeepLong
+  guid: 762dbf5f4b02294891c4b460b9fb36bc
+  Banks:
+  - {fileID: 114370406013234814}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1585
 --- !u!114 &114177064321472948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,6 +810,28 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114206465330978186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Teleport/Teleport
+  guid: bdc7ebb0ea92bf4ca6d29b4371f1252a
+  Banks:
+  - {fileID: 114370406013234814}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 677
 --- !u!114 &114215485622282076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,6 +1064,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114257096065930672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114260473388005278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1118,21 @@ MonoBehaviour:
   Max: 15
   Default: 15
 --- !u!114 &114279874964628554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
+--- !u!114 &114281285821735384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1205,6 +1297,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114329333956546534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114332022504408016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,7 +1346,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114057097998475818}
+  - {fileID: 114281285821735384}
   MinDistance: 0
   MaxDistance: 0
   Length: 86337
@@ -1526,8 +1633,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114596904079579150}
-  - {fileID: 114525732902869476}
+  - {fileID: 114329333956546534}
+  - {fileID: 114037657099518704}
   MinDistance: 0
   MaxDistance: 0
   Length: 38439
@@ -1543,11 +1650,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/mwingfield/Documents/LudumDare42/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 636697162390000000
+  lastModified: 636697200340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 9197152
+    Value: 9228896
   Exists: 1
 --- !u!114 &114370637296991370
 MonoBehaviour:
@@ -1680,6 +1787,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114408489110309080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114411463497333428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,6 +1870,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114425301134120226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FadeOut
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114428037090295614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,11 +1912,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636697162390000000
+  lastModified: 636697200340000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1622
+    Value: 1768
   Exists: 1
 --- !u!114 &114437941681712422
 MonoBehaviour:
@@ -2095,6 +2232,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114522590173794430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ActivateOutro
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114525732902869476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,9 +2493,9 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114643806371551096}
-  - {fileID: 114537979968106168}
-  - {fileID: 114572773232888518}
+  - {fileID: 114771352227113712}
+  - {fileID: 114425301134120226}
+  - {fileID: 114408489110309080}
   MinDistance: 0
   MaxDistance: 0
   Length: 65105
@@ -2515,6 +2667,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114630127061444620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114635288334650128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,8 +2761,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114745381472106326}
-  - {fileID: 114746231944670318}
+  - {fileID: 114522590173794430}
+  - {fileID: 114827504441025706}
   MinDistance: 0
   MaxDistance: 0
   Length: 52906
@@ -3045,7 +3212,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114976295991422254}
+  - {fileID: 114630127061444620}
   MinDistance: 0
   MaxDistance: 0
   Length: 103125
@@ -3158,7 +3325,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114437941681712422}
+  - {fileID: 114257096065930672}
   MinDistance: 0
   MaxDistance: 0
   Length: 79793
@@ -3278,6 +3445,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 103125
+--- !u!114 &114771352227113712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: EndTrigger
+  Min: 0
+  Max: 1
+  Default: 0.99500006
 --- !u!114 &114778071793350412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3492,6 +3674,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Speedup
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114827504441025706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SplashSongFade
   Min: 0
   Max: 1
   Default: 0
@@ -3895,6 +4092,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114912906844652406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ball/Beep/Beep
+  guid: 97140843bd7d3340aaffd042531c95be
+  Banks:
+  - {fileID: 114370406013234814}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 677
 --- !u!114 &114915569898284612
 MonoBehaviour:
   m_ObjectHideFlags: 0
