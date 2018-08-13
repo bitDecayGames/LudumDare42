@@ -53,9 +53,9 @@ namespace Splash {
 
 		public void HandOnBallEvent() {
 			Debug.Log("Maybe some sort of activation beeping?");
-			FMOD.Studio.EventInstance helmetEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/PickUpBall/PickUpBall");
-			helmetEvent.start();
-			helmetEvent.release();
+//			FMOD.Studio.EventInstance helmetEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/PickUpBall/PickUpBall");
+//			helmetEvent.start();
+//			helmetEvent.release();
 		}
 
 		public void ThinkingBeforeGameStartsEvent() {

@@ -34,5 +34,10 @@ namespace Player
         {
             return _timeLimit;
         }
+
+        public void RefreshTimer()
+        {
+            _timeLimit = TimeLimit;
+        }
     }
 }
