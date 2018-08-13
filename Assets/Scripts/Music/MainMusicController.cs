@@ -45,6 +45,16 @@ public class MainMusicController : MonoBehaviour
     {
         _ambientMusicEvent.setParameterValue("FadeSong", 1);
     }
+
+    public void SpeedUpCrystal()
+    {
+        _crystalAmbienceEvent.setParameterValue("Speedup", 1);
+    }
+
+    public void StopCrystalSound()
+    {
+        _crystalAmbienceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
     
     private void Update()
     {

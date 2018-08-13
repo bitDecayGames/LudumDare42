@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using Player;
 using UnityEngine;
 using Object = System.Object;
@@ -32,6 +33,7 @@ public class StartCutscene : MonoBehaviour {
 
     public void StartBrokenPanelRotoscope() {
         if (!started) {
+            GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
             started = true;
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
             player.SetPlayerPhase(PlayerControls.DISABLED_PHASE);
@@ -52,26 +54,28 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void StartSpeedingCrystal() {
-        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().FadeOutAmbientSong();
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().SpeedUpCrystal();
         originalAnimatorSpeed = CrystalRoomAnimator.speed;
         CrystalRoomAnimator.speed *= 4;
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 8;
+        timer.TimeLimit = 12;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndSpeedingCrystal);
     }
 
     public void EndSpeedingCrystal(Transform t) {
         CrystalRoomAnimator.speed = originalAnimatorSpeed;
+        RuntimeManager.PlayOneShot("event:/SFX/Explosions/CrystalExplosion");
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StopCrystalSound();
         CreateFlash();
     }
 
     public void CreateFlash() {
         var timer = Instantiate(DestroyTimer, transform);
-        timer.TimeLimit = 0.5f;
+        timer.TimeLimit = 2.5f;
         timer.RefreshTimer();
         timer.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndFlash);
-        Instantiate(WhiteFlashPrefab, timer.transform);
+        Instantiate(WhiteFlashPrefab);
     }
 
     public void EndFlash(Transform t) {
