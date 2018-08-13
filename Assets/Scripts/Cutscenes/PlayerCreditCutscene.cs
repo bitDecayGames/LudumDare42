@@ -1,9 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class PlayerCreditCutscene : MonoBehaviour
 {
+
+    [Serializable]
+    public class TeleportEvent : UnityEvent<Vector3>
+    {
+
+    }
+    public TeleportEvent onTeleport;
+
 
     public float spinSpeed;
     public float driftSpeed;
@@ -49,6 +59,7 @@ public class PlayerCreditCutscene : MonoBehaviour
     {
         // TODO: shader effect here
         // TODO: warp in sound here
+        onTeleport.Invoke(transform.position);
     }
 
     public void beep()
