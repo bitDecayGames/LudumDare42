@@ -22,10 +22,6 @@ public class BlinkController : MonoBehaviour
     {
         if (timer.timeLeft() < .75f)
         {
-            anim.Play("LightOnTeleBall");
-        }
-        else if (timer.timeLeft() < 2 && timer.timeLeft() > 1f)
-        {
             anim.Play("FastBlinkTeleball");
         }
         else
@@ -38,7 +34,7 @@ public class BlinkController : MonoBehaviour
     {
         RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/Beep");
     }
-    
+
     public void lightOnOccurred()
     {
         RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/BeepLong");
