@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{21473b2b-4850-48c7-989e-cd7d6a5b8452}">
+        <property name="name">
+            <value>SplashSongFade</value>
+        </property>
+        <relationship name="folder">
+            <destination>{1dbfbd20-9981-438a-8855-0e3c18f36fe3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{5d6d0d63-6dce-4ae8-baaf-ad05b2b0c5c5}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{5d6d0d63-6dce-4ae8-baaf-ad05b2b0c5c5}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.15000000596046448</value>
+        </property>
+    </object>
+</objects>
