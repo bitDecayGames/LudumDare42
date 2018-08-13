@@ -24,7 +24,7 @@ public class PlayerCreditCutscene : MonoBehaviour
     void Start()
     {
         bool cameFromTitle = true;
-
+        
         GameObject creditData = GameObject.Find("CreditData");
         if (creditData)
         {
@@ -39,7 +39,9 @@ public class PlayerCreditCutscene : MonoBehaviour
         }
         else
         {
-            // TODO: Play space oddity music
+            var creditsMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/CreditsSong");
+            creditsMusic.start();
+            creditsMusic.release();
         }
 
         Direction = new Vector3(-1, -3, 0);

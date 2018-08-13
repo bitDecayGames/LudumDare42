@@ -53,7 +53,7 @@ public class MainMusicController : MonoBehaviour
             ProximityGameObjectTransform1 = Camera.main.transform;
         }
         
-        float distance = Mathf.Abs(Vector3.Distance(ProximityGameObjectTransform1.position, ProximityGameObjectTransform2.position));
+        float distance = Mathf.Abs(Vector3.Distance(new Vector3(ProximityGameObjectTransform1.position.x, ProximityGameObjectTransform1.position.y, 0), ProximityGameObjectTransform2.position));
         Debug.Log("Pre-math value: " + distance);
         Debug.Log(string.Format("Sending {0} to the controller", Mathf.Clamp(distance, 5f, 15f)));
         _crystalAmbienceEvent.setParameterValue(ProximityProperty, Mathf.Clamp(distance, 5f, 15f));
