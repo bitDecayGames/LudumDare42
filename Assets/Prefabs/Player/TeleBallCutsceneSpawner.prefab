@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114676820258570820}
   - component: {fileID: 114074994720123522}
   - component: {fileID: 114022424756805612}
+  - component: {fileID: 114507777670299300}
+  - component: {fileID: 114476619472905518}
   m_Layer: 8
   m_Name: TeleBallCutsceneSpawner
   m_TagString: Untagged
@@ -91,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3600d80c2c1a411a9baf27e93aea780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefaultFollow: 0
 --- !u!114 &114074994720123522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +106,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeLimit: 3
+  MetricKey: 
+--- !u!114 &114476619472905518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672426096930712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c269866c5b774cefbcd78e066ad5605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCollideEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114507777670299300}
+        m_MethodName: HitSomething
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Player.CollideAlert+OnCollisionEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCollideExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Player.CollideAlert+OnCollisionEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCollideStay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Player.CollideAlert+OnCollisionEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114507777670299300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672426096930712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b4e480f52114d3b886c8a9f7f9cc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114676820258570820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawn: {fileID: 4200735779955316, guid: 7cf0ce718a5a7496f9fbc861943fe1ab, type: 2}
   shouldSpawn: 1
+  shareParent: 0
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
