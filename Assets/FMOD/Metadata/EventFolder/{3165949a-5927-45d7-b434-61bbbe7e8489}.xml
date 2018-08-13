@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{3165949a-5927-45d7-b434-61bbbe7e8489}">
+        <property name="name">
+            <value>HaloActive</value>
+        </property>
+        <relationship name="folder">
+            <destination>{10878e22-5a72-4567-861f-df7becc37af1}</destination>
+        </relationship>
+    </object>
+</objects>

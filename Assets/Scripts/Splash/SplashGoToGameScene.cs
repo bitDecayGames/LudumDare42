@@ -41,7 +41,7 @@ namespace Splash {
 		}
 		
 		public void GoToGameScreenEvent() {
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene("Mike");
 		}
 	}
 }

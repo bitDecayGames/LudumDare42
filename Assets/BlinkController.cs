@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using Player;
 
@@ -23,7 +24,7 @@ public class BlinkController : MonoBehaviour
         {
             anim.Play("LightOnTeleBall");
         }
-        else if (timer.timeLeft() < 2)
+        else if (timer.timeLeft() < 2 && timer.timeLeft() > 1f)
         {
             anim.Play("FastBlinkTeleball");
         }
@@ -35,6 +36,11 @@ public class BlinkController : MonoBehaviour
 
     public void blinkOccurred()
     {
-        // TODO: play beep sound effect
+        RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/Beep");
+    }
+    
+    public void lightOnOccurred()
+    {
+        RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/BeepLong");
     }
 }

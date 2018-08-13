@@ -109,6 +109,7 @@ namespace Player
                         bullet.GetComponent<SpawnOnDestroy>().OnSpawn.AddListener(playerTransform => {
                             var tmpCam = Camera.main.GetComponent<CameraWarpShader>();
                             tmpCam.setWarpPosition(playerTransform.position);
+                            GameObject.Find("MainGameSFXController").GetComponent<MainGameSFXController>().PlayTeleportSound(true);
                             playerTransform.GetComponent<PlayerControls>().onTeleport
                                 .AddListener(tmpCam.setWarpPosition);
                         });

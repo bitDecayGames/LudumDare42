@@ -1,24 +1,32 @@
-using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class MainGameSFXController : MonoBehaviour
 {
-    private EventInstance _teleportSound;
-    private EventInstance _menuSound;
-    private void Start()
+    public void PlayTeleportSound(bool firstTime = false)
     {
-        _teleportSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Teleport/Teleport");
-        _menuSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Menu/Menu");
-    }
-
-    public void PlayTeleportSound()
-    {
-        _teleportSound.start();
+        
+        var teleportSound = RuntimeManager.CreateInstance("event:/SFX/Teleport/Teleport");
+        if (firstTime)
+        {
+            teleportSound.setParameterValue("FirstTime", 1);
+        }
+        teleportSound.start();
+        teleportSound.release();
     }
 
     public void PlayMenuSound()
     {
-        _menuSound.start();
-        _menuSound.release();
+        RuntimeManager.PlayOneShot("event:/SFX/Menu/Menu");
+    }
+    
+    public void PlayBeepShort()
+    {
+        RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/Beep");
+    }
+
+    public void PlayBeepLong()
+    {
+        RuntimeManager.PlayOneShot("event:/SFX/Ball/Beep/BeepLong");
     }
 }

@@ -42,6 +42,9 @@ namespace Player
         private bool startAiming = false;
 
         private MetricTracker tracker;
+        
+        [FMODUnity.EventRef] private string _haloSoundPath = "event:/SFX/Ball/HaloActive/HaloActive";
+        private FMOD.Studio.EventInstance _haloEvent;
 
         void Start()
         {
@@ -52,6 +55,11 @@ namespace Player
 
         void Update()
         {
+            if (shooter.canShoot)
+            {
+                _haloEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            }
+            
             switch (phase)
             {
                 case AIM_PHASE:
@@ -69,6 +77,8 @@ namespace Player
                     {
                         startAiming = false;
                         // TODO: shoot at mouse
+                        _haloEvent = FMODUnity.RuntimeManager.CreateInstance(_haloSoundPath);
+                        _haloEvent.start();
                         foreach (var predictor in GameObject.FindGameObjectsWithTag("TelePredictor")) Destroy(predictor.gameObject);
 
                         shooter.Shoot(TeleBallPrefab, true);
@@ -90,18 +100,21 @@ namespace Player
                     }
                     else if (Input.GetMouseButton(0))
                     {
+                        
                         // TODO: allow physics to proceed?
                         if (teleBallRef)
                         {
                             teleBallRefAnim.SetOn(false);
+                            _haloEvent.setParameterValue("Active", 0);
                         }
-
                     }
                     else
                     {
                         if (teleBallRef)
                         {
                             teleBallRefAnim.SetOn(true);
+                            Debug.Log("Setting Active to true");
+                            _haloEvent.setParameterValue("Active", 1);
                         }
                         if (teleBallPositionIsValid)
                         {
@@ -133,7 +146,6 @@ namespace Player
 
         public void OnShoot(Transform shot)
         {
-
             teleBallRef = shot;
             teleBallRefAnim = teleBallRef.GetComponent<ChildAnimationController>();
             var collideAlert = teleBallRef.GetComponent<CollideAlert>();
@@ -177,6 +189,7 @@ namespace Player
         {
             if (teleBallRef != null)
             {
+                _haloEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 tracker.AddToTracking(MetricTracker.TELEPORT);
                 Transform exit = Instantiate(PlayerExitPrefab);
                 exit.position = transform.position;
