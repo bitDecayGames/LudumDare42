@@ -7508,16 +7508,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114237994872971094, guid: ec030b0466d0615459f22dc92b4c498a,
-        type: 2}
-      propertyPath: blackHole
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114451506987904674, guid: ec030b0466d0615459f22dc92b4c498a,
-        type: 2}
-      propertyPath: brownHole
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec030b0466d0615459f22dc92b4c498a, type: 2}
   m_IsPrefabAsset: 0

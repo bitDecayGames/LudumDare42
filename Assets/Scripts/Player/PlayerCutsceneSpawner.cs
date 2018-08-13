@@ -102,6 +102,12 @@ namespace Player
                         bullet = Instantiate(SpawnLocationPrefab);
                         bullet.transform.position = transform.position;
                         bullet.velocity = ShootVector;
+                        bullet.GetComponent<SpawnOnDestroy>().OnSpawn.AddListener(playerTransform => {
+                            var tmpCam = Camera.main.GetComponent<CameraWarpShader>();
+                            tmpCam.setWarpPosition(playerTransform.position);
+                            playerTransform.GetComponent<PlayerControls>().onTeleport
+                                .AddListener(tmpCam.setWarpPosition);
+                        });
                         currentState = SpawnState.CLOSE;
                     }
                     else _shootTimer -= Time.deltaTime;

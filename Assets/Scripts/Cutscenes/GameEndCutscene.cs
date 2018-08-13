@@ -1,6 +1,7 @@
 ﻿using System;
 using Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEndCutscene : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class GameEndCutscene : MonoBehaviour {
 	public Transform MoveBlackHoleToPointB;
 	public SpriteRenderer FadeToBlack;
 	public Rigidbody2D FakeTeleBall;
+	public CreditMetadata CreditMetadata;
 
 	private PlayerControls player;
 	private CameraController cam;
@@ -95,10 +97,13 @@ public class GameEndCutscene : MonoBehaviour {
 				break;
 			case 5:
 				// TODO: Tanner: load credits screen here
+				Time.timeScale = 1F;
+				Time.fixedDeltaTime = 0.02F * Time.timeScale;
 				// set winning flag to true
+				CreditMetadata.cameFromTitle = true;
 				// load credits screen
 				Debug.Log("Load credits");
-//				SceneManager.LoadScene("Credits");
+				SceneManager.LoadScene("Credits");
 				break;
 		}
 

@@ -247,7 +247,7 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 59ef9655c6824c847a2f2984334a679b, type: 3}
   ratio: 0
   warpPoint: {x: 0, y: 0, z: 0}
-  radius: 0
+  radius: 100
   waveThickness: 0.075
   waveSpeed: 0.0265
   distortion: 1.26
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowTransform: []
+  DefaultFollowTransform: {fileID: 0}
 --- !u!114 &114451506987904674
 MonoBehaviour:
   m_ObjectHideFlags: 1
