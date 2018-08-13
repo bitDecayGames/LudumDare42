@@ -30,6 +30,11 @@ public class MainMusicController : MonoBehaviour
     {
         _actionMusicEvent.setParameterValue(FadeOutProperty, value);
     }
+
+    public void TriggerBreathing()
+    {
+        _actionMusicEvent.setParameterValue("EndTrigger", 0);
+    }
     
     public void StartMusic()
     {
@@ -41,6 +46,13 @@ public class MainMusicController : MonoBehaviour
         _crystalAmbienceEvent.start();
     }
 
+    public void StopMusic()
+    {
+        _actionMusicEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        _ambientMusicEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        _crystalAmbienceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+    
     public void FadeOutAmbientSong()
     {
         _ambientMusicEvent.setParameterValue("FadeSong", 1);

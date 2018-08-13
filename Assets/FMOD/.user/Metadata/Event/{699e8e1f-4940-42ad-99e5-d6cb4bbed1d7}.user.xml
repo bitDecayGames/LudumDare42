@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{699e8e1f-4940-42ad-99e5-d6cb4bbed1d7}">
         <relationship name="selectables">
-            <destination>{64d00e34-41e6-472f-a98d-c76f93a4e138}</destination>
+            <destination>{0dd112d4-a074-4fb4-bdab-2dbc067b60dd}</destination>
         </relationship>
         <relationship name="uiLastParameterSelection">
-            <destination>{55bbc3ed-9fa9-44a9-b5da-8c8799b1385f}</destination>
+            <destination>{c9df4d1e-6658-4aa4-b687-d0242c10059b}</destination>
         </relationship>
     </object>
     <object class="MasterTrack" id="{c291cad3-15bc-4dbe-bdd9-b67cc27c81e9}">
@@ -19,26 +19,10 @@
     <object class="MixerInput" id="{7bf909f6-beb5-4a71-8335-c8ef153a9674}"/>
     <object class="EventAutomatableProperties" id="{d69fc3d6-fcd1-4ca8-bcc4-8ac72c8e0fbc}"/>
     <object class="MarkerTrack" id="{1ab11a4b-bedd-49ff-afae-62939cccb966}"/>
-    <object class="GroupTrack" id="{64d00e34-41e6-472f-a98d-c76f93a4e138}">
-        <property name="uiAutomationTracksVisible">
-            <value>false</value>
-        </property>
-    </object>
-    <object class="GroupTrack" id="{c72ebc52-9577-4adc-afca-dd2c45ed0ef3}">
-        <property name="uiAutomationTracksVisible">
-            <value>false</value>
-        </property>
-    </object>
-    <object class="GroupTrack" id="{2878c801-5e63-4b60-93ff-991586066166}">
-        <property name="uiAutomationTracksVisible">
-            <value>false</value>
-        </property>
-    </object>
-    <object class="GroupTrack" id="{0dd112d4-a074-4fb4-bdab-2dbc067b60dd}">
-        <property name="uiAutomationTracksVisible">
-            <value>false</value>
-        </property>
-    </object>
+    <object class="GroupTrack" id="{64d00e34-41e6-472f-a98d-c76f93a4e138}"/>
+    <object class="GroupTrack" id="{c72ebc52-9577-4adc-afca-dd2c45ed0ef3}"/>
+    <object class="GroupTrack" id="{2878c801-5e63-4b60-93ff-991586066166}"/>
+    <object class="GroupTrack" id="{0dd112d4-a074-4fb4-bdab-2dbc067b60dd}"/>
     <object class="Timeline" id="{55bbc3ed-9fa9-44a9-b5da-8c8799b1385f}">
         <property name="uiLastRulerScaleRatio">
             <value>0.061420527959611525</value>

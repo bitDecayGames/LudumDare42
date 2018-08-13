@@ -32,6 +32,7 @@ public class GameEndCutscene : MonoBehaviour {
 
 	public void StartEndCutscene() {
 		// kill black hole controller
+		GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().SetFadeOut(0);
 		var bhCtrl = FindObjectOfType<BlackHoleController>();
 		if (bhCtrl) Destroy(bhCtrl);
 

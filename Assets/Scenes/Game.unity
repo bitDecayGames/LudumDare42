@@ -15303,6 +15303,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
+        type: 2}
+      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4984308895638496, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 184.51
@@ -15357,6 +15362,16 @@ Prefab:
     - target: {fileID: 4210272036582662, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
+        type: 2}
+      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114755446328533184, guid: 3e6257bf8ec124582839de2e0b45fcd9,
+        type: 2}
+      propertyPath: OnCollideExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6257bf8ec124582839de2e0b45fcd9, type: 2}
@@ -15543,6 +15558,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1141336535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114701534810284526, guid: be0877eefb1d93b4ba222042900614cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 623256040}
+  m_Script: {fileID: 11500000, guid: 9708b9d602824d39b4b6b714ef1f9c3e, type: 3}
 --- !u!1 &1192922168
 GameObject:
   m_ObjectHideFlags: 0
@@ -22031,7 +22052,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnCollideEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1141336535}
+        m_MethodName: TriggerBreathing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: TriggerAlert+OnTriggerEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   OnCollideExit:

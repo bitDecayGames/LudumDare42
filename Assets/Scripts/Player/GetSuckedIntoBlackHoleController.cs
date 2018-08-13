@@ -25,7 +25,9 @@ public class GetSuckedIntoBlackHoleController : MonoBehaviour
         transform.Rotate(Vector3.back);
 
         deathAnimationTimer -= Time.deltaTime;
-        if (deathAnimationTimer <= 0f) {
+        if (deathAnimationTimer <= 0f)
+        {
+            GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StopMusic();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
