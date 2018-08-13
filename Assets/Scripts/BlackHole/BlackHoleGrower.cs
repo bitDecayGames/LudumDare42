@@ -22,7 +22,9 @@ public class BlackHoleGrower : MonoBehaviour {
 		started = true;
 		_timer = 0.01f;
 		originalRadius = brownHole.radius;
+		brownHole.radius = 0;
 		originalBlack = brownHole.black;
+		brownHole.black = 0;
 	}
 	
 	// Update is called once per frame
