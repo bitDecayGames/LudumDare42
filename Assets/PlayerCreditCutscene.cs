@@ -13,17 +13,23 @@ public class PlayerCreditCutscene : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // TODO: Check if we got here from the end of the game
-        bool cameFromEnd = false;
+        bool cameFromTitle = true;
 
-        if (cameFromEnd)
+        GameObject creditData = GameObject.Find("CreditData");
+        if (creditData)
         {
-            // TODO: Play space oddity music
+            cameFromTitle = creditData.GetComponent<CreditMetadata>().cameFromTitle;
+            Destroy(creditData);
         }
-        else
+
+        if (cameFromTitle)
         {
             // TODO: Play other music(?)
             Destroy(transform.parent.gameObject);
+        }
+        else
+        {
+            // TODO: Play space oddity music
         }
 
         Direction = new Vector3(-1, -3, 0);
