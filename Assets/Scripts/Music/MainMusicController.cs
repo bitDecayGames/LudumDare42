@@ -13,7 +13,7 @@ public class MainMusicController : MonoBehaviour
     public Transform ProximityGameObjectTransform2;
 
     [FMODUnity.EventRef] private string _actionMusic = "event:/Music/ArcadeTheme/MainThemeAction";
-    private FMOD.Studio.EventInstance actionMusicEvent;
+    private FMOD.Studio.EventInstance _actionMusicEvent;
     
     [FMODUnity.EventRef] private string _ambientMusic = "event:/Music/SpaceAmbience";
     private FMOD.Studio.EventInstance _ambientMusicEvent;
@@ -23,12 +23,12 @@ public class MainMusicController : MonoBehaviour
     
     public void SetEndTrigger(float value)
     {   
-        actionMusicEvent.setParameterValue(EndTriggerProperty, value);
+        _actionMusicEvent.setParameterValue(EndTriggerProperty, value);
     }
 
     public void SetFadeOut(float value)
     {
-        actionMusicEvent.setParameterValue(FadeOutProperty, value);
+        _actionMusicEvent.setParameterValue(FadeOutProperty, value);
     }
     
     public void StartMusic()
@@ -54,6 +54,12 @@ public class MainMusicController : MonoBehaviour
     public void StopCrystalSound()
     {
         _crystalAmbienceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void StartActionMusic()
+    {
+        _actionMusicEvent = FMODUnity.RuntimeManager.CreateInstance(_actionMusic);
+        _actionMusicEvent.start();
     }
     
     private void Update()

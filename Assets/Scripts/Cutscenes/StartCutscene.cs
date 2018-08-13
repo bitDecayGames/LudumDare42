@@ -104,6 +104,7 @@ public class StartCutscene : MonoBehaviour {
     }
 
     public void EndBlackHoleInitialization() {
+        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StartActionMusic();
         var blackHole = Instantiate(BlackHolePrefab);
         blackHole.transform.position = BlackHoleSpawnPoint.position;
         blackHole.PathMarkers = PathMarkers;
