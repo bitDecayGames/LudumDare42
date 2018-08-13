@@ -13,6 +13,7 @@ public class StartCutscene : MonoBehaviour
     public BlackHoleController BlackHolePrefab;
     public DestroyAfterTimeLimit DestroyTimer;
     public Transform BlackHoleSpawnPoint;
+    public Transform PlayerSpawnPoint;
     public Animator CrystalRoomAnimator;
     public Transform WhiteFlashPrefab;
     public BlackHoleGrower BlackHoleGrowerPrefab;
@@ -65,9 +66,8 @@ public class StartCutscene : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
             player.SetPlayerPhase(PlayerControls.DISABLED_PHASE);
             player.DestroyActiveTeleBall();
-            var playerPos = player.transform.position;
-            playerPos.x = transform.position.x;
-            player.transform.position = playerPos;
+            player.transform.position = PlayerSpawnPoint.position;
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
 
             var cutscene = Instantiate(CutscenePrefab);
             cutscene.GetComponent<OnDestroyCallEvent>().OnDestroyed.AddListener(EndBrokenPanelRotoscope);
