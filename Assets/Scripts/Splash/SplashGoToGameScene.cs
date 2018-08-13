@@ -4,15 +4,6 @@ using UnityEngine.SceneManagement;
 namespace Splash {
 	public class SplashGoToGameScene : MonoBehaviour
 	{
-		public FMOD.Studio.EventInstance titleScreenMusic;
-		
-		private void Start()
-		{
-			titleScreenMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/TitleScreen");
-			titleScreenMusic.start();
-			DontDestroyOnLoad(gameObject);
-		}
-
 		public void StartSplashScreenEvent() {
 			Debug.Log("start splash screen music here");
 		}
@@ -53,9 +44,6 @@ namespace Splash {
 
 		public void HandOnBallEvent() {
 			Debug.Log("Maybe some sort of activation beeping?");
-//			FMOD.Studio.EventInstance helmetEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/PickUpBall/PickUpBall");
-//			helmetEvent.start();
-//			helmetEvent.release();
 		}
 
 		public void ThinkingBeforeGameStartsEvent() {
@@ -64,7 +52,7 @@ namespace Splash {
 		
 		public void GoToGameScreenEvent() {
 			Debug.Log("Go to the game screen here");
-			SceneManager.LoadScene("TitleScreen");
+			SceneManager.LoadScene("Mike");
 		}
 	}
 }

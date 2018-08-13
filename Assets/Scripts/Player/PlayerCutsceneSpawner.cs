@@ -2,6 +2,7 @@
 
 namespace Player
 {
+    
     public class PlayerCutsceneSpawner : MonoBehaviour
     {
 
@@ -13,14 +14,17 @@ namespace Player
         public float OpenDelay;
         private Animator hatch;
 
+        private float _startDelay;
         private float _hatchDelay;
         private float _shootTimer;
         private bool shot = false;
+        private bool _musicStarted;
         private Rigidbody2D bullet;
 
         private enum SpawnState
         {
             PRE,
+            DELAYEDSTART,
             START,
             SPAWN,
             CLOSE,
@@ -41,8 +45,13 @@ namespace Player
 
         public void startSequence()
         {
-            transform.Find("CamFollow").gameObject.SetActive(true);
-            currentState = SpawnState.START;
+            var splashScreenMusicController = GameObject.Find("MusicController");
+            if (splashScreenMusicController != null)
+            {
+                _startDelay = 4f;
+                splashScreenMusicController.SendMessage("FadeOutMusic");
+            }
+            currentState = SpawnState.DELAYEDSTART;
         }
 
         private void OnDestroy()
@@ -62,12 +71,28 @@ namespace Player
             {
                 case SpawnState.PRE:
                     break;
+                case SpawnState.DELAYEDSTART:
+                    _startDelay -= Time.deltaTime;
+                    if (_startDelay <= 0)
+                    {
+                        currentState = SpawnState.START;
+                    }
+                    break;
                 case SpawnState.START:
+                    transform.Find("CamFollow").gameObject.SetActive(true);
+                    if (!_musicStarted)
+                    {
+                        _musicStarted = true;
+                        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StartMusic();
+                    }
                     _hatchDelay -= Time.deltaTime;
                     if (_hatchDelay <= 0)
                     {
                         _hatchDelay = OpenDelay;
                         hatch.Play("Open");
+                        var hatchOpenSfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Hatch/OpenHatch");
+                        hatchOpenSfx.start();
+                        hatchOpenSfx.release();
                         currentState = SpawnState.SPAWN;
                     }
                     break;
@@ -86,7 +111,10 @@ namespace Player
                     if (_hatchDelay <= 0)
                     {
                         hatch.Play("Close");
-                        currentState = SpawnState.CLOSE;
+                        var hatchCloseSfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Hatch/CloseHatch");
+                        hatchCloseSfx.start();
+                        hatchCloseSfx.release();
+                        currentState = SpawnState.DONE;
                     }
                     break;
                 case SpawnState.DONE:
