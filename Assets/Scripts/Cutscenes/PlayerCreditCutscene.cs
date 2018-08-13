@@ -25,7 +25,7 @@ public class PlayerCreditCutscene : MonoBehaviour
     {
         bool cameFromTitle = true;
         
-        GameObject creditData = GameObject.Find("CreditData");
+        GameObject creditData = GameObject.Find("CreditData(Clone)");
         if (creditData)
         {
             cameFromTitle = creditData.GetComponent<CreditMetadata>().cameFromTitle;
@@ -39,9 +39,7 @@ public class PlayerCreditCutscene : MonoBehaviour
         }
         else
         {
-            var creditsMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/CreditsSong");
-            creditsMusic.start();
-            creditsMusic.release();
+            
         }
 
         Direction = new Vector3(-1, -3, 0);

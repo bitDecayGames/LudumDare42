@@ -8,8 +8,7 @@ public class CreditMetadata : MonoBehaviour
     public bool cameFromTitle = true;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         DontDestroyOnLoad(gameObject);
     }
 }

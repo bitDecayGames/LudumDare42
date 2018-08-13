@@ -56,22 +56,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1855972645517922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4662795094745840}
-  - component: {fileID: 114260488600199774}
-  m_Layer: 0
-  m_Name: CreditData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1864068909128936
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,19 +171,6 @@ Transform:
   m_Father: {fileID: 4984308895638496}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4662795094745840
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855972645517922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1872731, y: 0.8577364, z: -18.79306}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4984308895638496}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4984308895638496
 Transform:
   m_ObjectHideFlags: 1
@@ -215,7 +186,6 @@ Transform:
   - {fileID: 4505389207526132}
   - {fileID: 4404337248023392}
   - {fileID: 4552523328467406}
-  - {fileID: 4662795094745840}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -244,18 +214,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.27, y: 1.01}
   m_EdgeRadius: 0
---- !u!114 &114260488600199774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855972645517922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa3fb04ea545544e90667e05d627d0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameFromTitle: 0
 --- !u!114 &114711504343702626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,7 +232,8 @@ MonoBehaviour:
   FadeToBlack: {fileID: 212608494681588664}
   FakeTeleBall: {fileID: 50962107873055026, guid: fc4e0993a2a53460bb5a9086a15f41d4,
     type: 2}
-  CreditMetadata: {fileID: 114260488600199774}
+  CreditMetadataPrefab: {fileID: 114725773952069862, guid: b5117942aca032a4cbc9a9d5b0d14878,
+    type: 2}
 --- !u!114 &114755446328533184
 MonoBehaviour:
   m_ObjectHideFlags: 1

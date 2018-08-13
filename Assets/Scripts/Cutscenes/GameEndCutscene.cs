@@ -12,7 +12,7 @@ public class GameEndCutscene : MonoBehaviour {
 	public Transform MoveBlackHoleToPointB;
 	public SpriteRenderer FadeToBlack;
 	public Rigidbody2D FakeTeleBall;
-	public CreditMetadata CreditMetadata;
+	public CreditMetadata CreditMetadataPrefab;
 
 	private PlayerControls player;
 	private CameraController cam;
@@ -58,14 +58,12 @@ public class GameEndCutscene : MonoBehaviour {
 	private void SetState(int state) {
 		switch (state) {
 			case 1:
-				Debug.Log("Move black hole in close");
 				// screen shake for 2 seconds
 				waitTimeMS = 2000;
 				cam.InitiateScreenShake(waitTimeMS / 1000f, .1f);
 				// TODO: Tanner: Just entered the cutscene
 				break;
 			case 2:
-				Debug.Log("Get nervous, wind up to throw");
 				// rumble shake for 8 seconds
 				waitTimeMS = 6000;
 				cam.InitiateScreenShake(waitTimeMS / 1000f, .06f);
@@ -74,7 +72,6 @@ public class GameEndCutscene : MonoBehaviour {
 				// TODO: Tanner: getting nervous, about to throw the ball
 				break;
 			case 3:
-				Debug.Log("Slow time and throw ball");
 				waitTimeMS = 300;
 				cam.InitiateScreenShake(waitTimeMS / 500f, 0.01f);
 				// shoot ball to the right
@@ -89,10 +86,12 @@ public class GameEndCutscene : MonoBehaviour {
 				Time.timeScale = 0.1F;
 				Time.fixedDeltaTime = 0.02F * Time.timeScale;
 				// TODO: Tanner: ball starts shooting off into space, time slows
+				var creditsMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/CreditsSong");
+				creditsMusic.start();
+				creditsMusic.release();
 				break;
 			case 4:
-				Debug.Log("Fade to black");
-				waitTimeMS = 300;
+				waitTimeMS = 275;
 				// TODO: Tanner: fade to black
 				break;
 			case 5:
@@ -100,9 +99,9 @@ public class GameEndCutscene : MonoBehaviour {
 				Time.timeScale = 1F;
 				Time.fixedDeltaTime = 0.02F * Time.timeScale;
 				// set winning flag to true
-				CreditMetadata.cameFromTitle = true;
+				var creditMetadata = Instantiate(CreditMetadataPrefab);
+				creditMetadata.cameFromTitle = false;
 				// load credits screen
-				Debug.Log("Load credits");
 				SceneManager.LoadScene("Credits");
 				break;
 		}

@@ -28,7 +28,7 @@ public class ScrollScript : MonoBehaviour
 
         if (timePassed >= EndTime)
         {
-            Debug.Log("DONE");
+//            Debug.Log("DONE");
         }
     }
 }
