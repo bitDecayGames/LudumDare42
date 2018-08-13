@@ -83,7 +83,11 @@ namespace Player
                     if (!_musicStarted)
                     {
                         _musicStarted = true;
-                        GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().StartMusic();
+                        var musicCtrlObj = GameObject.Find("MainGameMusicController");
+                        if (musicCtrlObj) {
+                            var musicCtrl = musicCtrlObj.GetComponent<MainMusicController>();
+                            if (musicCtrl) musicCtrl.StartMusic();
+                        }
                     }
                     _hatchDelay -= Time.deltaTime;
                     if (_hatchDelay <= 0)

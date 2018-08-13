@@ -124,8 +124,8 @@ public class GameEndCutscene : MonoBehaviour {
 				MoveBlackHoleToPointA.position = targetBlackHolePath * timeRatio + targetBlackHoleOriginalPosition;
 				break;
 			case 2:
-				break;
 			case 3:
+				MoveBlackHoleToPointA.position += new Vector3(0.005f, 0, 0);
 				break;
 			case 4:
 				// fade to black
