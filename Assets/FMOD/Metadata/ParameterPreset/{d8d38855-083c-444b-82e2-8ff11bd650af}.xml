@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{d8d38855-083c-444b-82e2-8ff11bd650af}">
+        <property name="name">
+            <value>ActivateOutro</value>
+        </property>
+        <relationship name="folder">
+            <destination>{1dbfbd20-9981-438a-8855-0e3c18f36fe3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{dc374b64-62f2-4592-8377-01948686e291}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{dc374b64-62f2-4592-8377-01948686e291}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>
