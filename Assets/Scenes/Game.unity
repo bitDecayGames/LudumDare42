@@ -15540,6 +15540,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+--- !u!1 &1559472843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1041766886609122, guid: ee54ff7219dbf084fbc43c1c48fd5114,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321172771}
+--- !u!114 &1559472846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559472843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616258877b2eae24486b8a8899eae003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
 --- !u!1 &1631557765
 GameObject:
   m_ObjectHideFlags: 0
