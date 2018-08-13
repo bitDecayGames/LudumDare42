@@ -18,7 +18,7 @@ public class SplashScreenMusicController : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name.Equals("Splash"))
             {
-                SceneManager.LoadScene("Mike");
+                SceneManager.LoadScene("Game");
             }
             else
             {
