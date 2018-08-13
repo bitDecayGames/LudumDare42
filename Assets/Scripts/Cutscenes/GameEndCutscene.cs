@@ -36,7 +36,7 @@ public class GameEndCutscene : MonoBehaviour {
 		if (bhCtrl) Destroy(bhCtrl);
 
 		// move player to position
-		player = GameObject.Find("Player").GetComponent<PlayerControls>();
+		player = GameObject.Find("Player(Clone)").GetComponent<PlayerControls>();
 		player.ForceMoveTeleBallToPosition(MovePlayerToPoint.position);
 		player.ForceTeleportToBall();
 		player.transform.rotation = Quaternion.Euler(0, 0, 0);
