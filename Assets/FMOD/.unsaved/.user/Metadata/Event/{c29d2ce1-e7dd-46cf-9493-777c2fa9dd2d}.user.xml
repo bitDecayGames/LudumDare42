@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="Event" id="{c29d2ce1-e7dd-46cf-9493-777c2fa9dd2d}">
+        <relationship name="uiLastParameterSelection">
+            <destination>{d53918d2-54e9-49fa-84de-67939140d8b8}</destination>
+        </relationship>
+    </object>
+    <object class="MasterTrack" id="{4a3fae90-a65f-486f-879c-5b1ccbc8509b}"/>
+    <object class="MixerInput" id="{6358d118-e063-4ead-9bb6-686273526c32}"/>
+    <object class="EventAutomatableProperties" id="{a16bf94c-9da5-457e-aca6-8aebc0815c6d}"/>
+    <object class="MarkerTrack" id="{f50050a3-71f4-45ac-9d4a-e86a7b33bd14}"/>
+    <object class="GroupTrack" id="{950a23df-e4dd-40c0-9ef3-b22371905e27}"/>
+    <object class="Timeline" id="{d53918d2-54e9-49fa-84de-67939140d8b8}">
+        <property name="uiLastRulerScaleRatio">
+            <value>0.02461033634126333</value>
+        </property>
+    </object>
+    <object class="ParameterProxy" id="{11f882bf-9bea-4c44-a5ff-a040f26f18cf}">
+        <property name="uiLastRulerScaleRatio">
+            <value>0.00082034454470877774</value>
+        </property>
+        <property name="uiLastHorizontalScrollBarValue">
+            <value>11550</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{8e512cf0-871a-48f4-a343-11081ffd109d}">
+        <relationship name="input">
+            <destination>{1fb44b82-5117-428f-9c37-edac1dc1cc36}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{08abea15-f82b-4622-835d-116060d33493}"/>
+    <object class="MixerBusPanner" id="{80433003-a41c-47fe-948d-6d56a9d3c656}"/>
+    <object class="AutomationTrack" id="{bd3fcfb8-a2fc-4f99-92d4-26176be092e5}"/>
+    <object class="AutomationTrack" id="{33b1f0c3-0f98-4ee0-9c6f-ee757894f198}"/>
+    <object class="SingleSound" id="{a54f6def-79ea-4ab2-b36d-c4e767f7eb5e}"/>
+    <object class="EventMixerGroup" id="{1fb44b82-5117-428f-9c37-edac1dc1cc36}">
+        <property name="uiModulationDrawerVisible">
+            <value>false</value>
+        </property>
+    </object>
+    <object class="LoopRegion" id="{41772300-35ef-485b-9c6c-b57393af058c}"/>
+    <object class="MixerBusEffectChain" id="{b250b596-67d9-4114-9825-8289d079b7b3}"/>
+    <object class="MixerBusPanner" id="{2ec67121-7892-43b9-9e0c-61653d440337}"/>
+    <object class="MixerBusFader" id="{8887ecf3-f3e7-453f-a093-92f0ee66a799}"/>
+    <object class="MixerBusEffectChain" id="{bbf36740-97e1-4a62-a816-ca81c5542767}"/>
+    <object class="MixerBusPanner" id="{c67e1212-e9c1-456e-9224-1815699c04d5}"/>
+    <object class="MixerBusFader" id="{53f2a2d3-c91b-464d-af00-15ac096577a1}"/>
+    <object class="MixerBusFader" id="{6db73e63-392c-481d-83f7-2105d3867c70}"/>
+    <object class="ProxyEffect" id="{ec54a37c-04ec-491b-a594-82135aedd172}"/>
+</objects>
