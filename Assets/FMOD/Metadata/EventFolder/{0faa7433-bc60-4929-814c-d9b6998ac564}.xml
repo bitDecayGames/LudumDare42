@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{0faa7433-bc60-4929-814c-d9b6998ac564}">
+        <property name="name">
+            <value>Teleport</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2230e131-9812-4623-b940-bfc766021f3c}</destination>
+        </relationship>
+    </object>
+</objects>
