@@ -43,7 +43,7 @@ MonoBehaviour:
   - {fileID: 114687752095926614}
   MasterBankRef: {fileID: 114183915488962552}
   StringsBankRef: {fileID: 114433523977865252}
-  stringsBankWriteTime: 636697710186434263
+  stringsBankWriteTime: 636697720067267418
   cacheVersion: 2
 --- !u!114 &114000347067840162
 MonoBehaviour:
@@ -300,6 +300,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 85697
+--- !u!114 &114029193955361500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FadeOut
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114030089158582232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,6 +1093,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114109080436438950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Active
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114110812544709862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1431,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114140808543191742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114140813711314246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,6 +1566,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114160887001236778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: EndTrigger
+  Min: 0
+  Max: 1
+  Default: 0.99500006
 --- !u!114 &114161023096818780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,7 +1862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Maveric\Documents\LudumDare42\Assets\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636697710186364258
+  lastModified: 636697720067197418
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1962,7 +2022,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114131226984743504}
+  - {fileID: 114665381378036186}
   MinDistance: 0
   MaxDistance: 0
   Length: 677
@@ -2247,7 +2307,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114129206446686724}
+  - {fileID: 114109080436438950}
   MinDistance: 0
   MaxDistance: 0
   Length: 3217
@@ -2311,6 +2371,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114239061096950696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114239102792643334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2665,6 +2740,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114274188996929316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SplashSongFade
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114275709529293756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3238,7 +3328,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114509512730339854}
+  - {fileID: 114410028786156338}
   MinDistance: 0
   MaxDistance: 0
   Length: 86337
@@ -3660,8 +3750,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114805614655774830}
-  - {fileID: 114071537078858754}
+  - {fileID: 114705551890221802}
+  - {fileID: 114706086700265348}
   MinDistance: 0
   MaxDistance: 0
   Length: 38439
@@ -4005,6 +4095,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114410028786156338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114411463497333428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4197,7 +4302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636697710186434263
+  lastModified: 636697720067267418
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -4903,6 +5008,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114496697994905278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
 --- !u!114 &114498639668416364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5680,9 +5800,9 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114006929994145382}
-  - {fileID: 114825095896886260}
-  - {fileID: 114308960673203926}
+  - {fileID: 114160887001236778}
+  - {fileID: 114029193955361500}
+  - {fileID: 114140808543191742}
   MinDistance: 0
   MaxDistance: 0
   Length: 65105
@@ -6293,8 +6413,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114741429550287336}
-  - {fileID: 114958603550655416}
+  - {fileID: 114870579365254636}
+  - {fileID: 114275709529293756}
   MinDistance: 0
   MaxDistance: 0
   Length: 52906
@@ -6523,6 +6643,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114665381378036186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FirstTime
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114665502235197868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6755,6 +6890,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114686382652154652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FadeSong
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114687558697085418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6987,6 +7137,36 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0.99500006
+--- !u!114 &114705551890221802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 5
+  Max: 15
+  Default: 15
+--- !u!114 &114706086700265348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Speedup
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114713209066369076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7186,7 +7366,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114653938007465690}
+  - {fileID: 114239061096950696}
   MinDistance: 0
   MaxDistance: 0
   Length: 103125
@@ -7419,8 +7599,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114865349945278074}
-  - {fileID: 114331532272253896}
+  - {fileID: 114686382652154652}
+  - {fileID: 114496697994905278}
   MinDistance: 0
   MaxDistance: 0
   Length: 79793
@@ -8432,6 +8612,21 @@ MonoBehaviour:
   Min: 5
   Max: 15
   Default: 15
+--- !u!114 &114870579365254636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ActivateOutro
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114870627347959662
 MonoBehaviour:
   m_ObjectHideFlags: 0
