@@ -29,6 +29,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1481204813890686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4946821440423790}
+  m_Layer: 14
+  m_Name: PlayerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1489323901698086
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,12 +126,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1438027302166624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.18, y: -2.3, z: -0.14574869}
+  m_LocalPosition: {x: 7.46, y: -0.42, z: -0.14574869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4574707890923394}
   - {fileID: 4363918873338122}
   - {fileID: 4111375530227450}
+  - {fileID: 4946821440423790}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,6 +148,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4529183370831664}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4946821440423790
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481204813890686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: -0.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4529183370831664}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61532900583684628
 BoxCollider2D:
@@ -187,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e9bf6d31fc3e40b57dbed1c7e0c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CutsceneIsPlaying: 0
   CutscenePrefab: {fileID: 223941081512139606, guid: 6d4f1b649ef8d8240ad0a4e480ee40aa,
     type: 2}
   BlackHolePrefab: {fileID: 114716122781568296, guid: d81ac53a6e2d8cc42bde090558b3f8b8,
@@ -194,6 +224,7 @@ MonoBehaviour:
   DestroyTimer: {fileID: 114927514691783760, guid: 524468316a2314add80bcdee171dd950,
     type: 2}
   BlackHoleSpawnPoint: {fileID: 4574707890923394}
+  PlayerSpawnPoint: {fileID: 4946821440423790}
   CrystalRoomAnimator: {fileID: 95637709675768158}
   WhiteFlashPrefab: {fileID: 4143953056577150, guid: 0e5b683377f4c40209f90ab16ff76fc3,
     type: 2}
@@ -280,7 +311,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300032, guid: 2377e7bdc0bb31442bdbf0a9eb82fa95, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 2377e7bdc0bb31442bdbf0a9eb82fa95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

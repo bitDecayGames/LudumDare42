@@ -12463,12 +12463,6 @@ Prefab:
       propertyPath: ForegroundCamera
       value: 
       objectReference: {fileID: 625292074}
-    - target: {fileID: 212768691941294208, guid: f26de67920d91444eab637858a2576e3,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300020, guid: 2377e7bdc0bb31442bdbf0a9eb82fa95,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26de67920d91444eab637858a2576e3, type: 2}
   m_IsPrefabAsset: 0
@@ -14837,6 +14831,10 @@ Prefab:
     - target: {fileID: 4048342288300904, guid: 26c2e710ea5d24b4a93ee3a2fdb78750, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129558979984054, guid: 26c2e710ea5d24b4a93ee3a2fdb78750, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c2e710ea5d24b4a93ee3a2fdb78750, type: 2}
