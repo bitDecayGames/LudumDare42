@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\FMOD\LudumDare42.fspro
-  SourceProjectPathUnformatted: Assets\FMOD\LudumDare42.fspro
-  SourceBankPathUnformatted: Assets\FMOD\Build
+  sourceProjectPath: Assets/FMOD/LudumDare42.fspro
+  SourceProjectPathUnformatted: Assets/FMOD/LudumDare42.fspro
+  SourceBankPathUnformatted: Assets/FMOD/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

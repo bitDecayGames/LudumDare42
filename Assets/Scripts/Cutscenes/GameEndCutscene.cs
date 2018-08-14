@@ -14,6 +14,7 @@ public class GameEndCutscene : MonoBehaviour {
 	public Rigidbody2D FakeTeleBall;
 	public CreditMetadata CreditMetadataPrefab;
 	public RuntimeAnimatorController EndPlayerAnimator;
+	public Transform Sparkles;
 
 	private PlayerControls player;
 	private CameraController cam;
@@ -32,6 +33,8 @@ public class GameEndCutscene : MonoBehaviour {
 	}
 
 	public void StartEndCutscene() {
+		// turn off sparkles
+		Sparkles.gameObject.SetActive(false);
 		// kill black hole controller
 		GameObject.Find("MainGameMusicController").GetComponent<MainMusicController>().SetFadeOut(0);
 		var bhCtrl = FindObjectOfType<BlackHoleController>();

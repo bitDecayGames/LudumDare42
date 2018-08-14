@@ -7,13 +7,15 @@ namespace Player {
 
 		public string AnimationName;
 
+		public float delay = 0;
+
 		void Awake() {
 			Init();
 		}
 
 		private void Init() {
 			if (AnimationName != null) {
-				GetComponent<Animator>().Play(AnimationName);
+				GetComponent<Animator>().Play(AnimationName, 0, delay);
 			}
 		}
 		
