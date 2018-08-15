@@ -12,7 +12,7 @@ public class BlackHoleController : MonoBehaviour
 
     private bool _done;
     
-    private void Start()
+    public void Init()
     {
         _nodeQueue = new Queue<PathNode>();
 
@@ -34,7 +34,7 @@ public class BlackHoleController : MonoBehaviour
             node.speed = speed ? speed.Speed : DefaultBlackHoleMovementSpeed;
 
             _nodeQueue.Enqueue(node);
-            Destroy(child.gameObject);
+//            Destroy(child.gameObject);
         }
 
         if (_nodeQueue.Count == 0)
@@ -48,6 +48,15 @@ public class BlackHoleController : MonoBehaviour
         }
 
     }
+
+    public PathNode SkipToNodeIndex(int index) {
+        if (index < _nodeQueue.Count) {
+            for (int i = 0; i + 1 < index; i++) LoadNextNode();
+        }
+
+        return _currentNode;
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name.ToLower().Contains("player"))
@@ -89,7 +98,7 @@ public class BlackHoleController : MonoBehaviour
     }
 }
 
-struct PathNode
+public struct PathNode
 {
     public Vector3 position;
     public float speed;

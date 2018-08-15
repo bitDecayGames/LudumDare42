@@ -12,7 +12,6 @@ namespace Player {
 		void Update () {
 			var result = !facingRight();
 			spriteRenderer.flipX = result;
-			Debug.Log("Set facing: " + result + " " + spriteRenderer.flipX);
 		}
 
 		private bool facingRight() {
@@ -21,7 +20,6 @@ namespace Player {
 			toMouse.z = 0;
 			toMouse.Normalize();
 			float angle = Vector3.Dot(transform.right, toMouse);
-			Debug.Log("Angle: " + angle);
 			return angle > 0;
 		}
 	}

@@ -150,6 +150,7 @@ public class StartCutscene : MonoBehaviour
         var blackHole = Instantiate(BlackHolePrefab);
         blackHole.transform.position = BlackHoleSpawnPoint.position;
         blackHole.PathMarkers = PathMarkers;
+        blackHole.Init();
         ForegroundCamera.brownHole = blackHole.transform;
         player.SetPlayerPhase(PlayerControls.AIM_PHASE);
         Camera.main.GetComponent<CameraController>().DefaultFollowTransform = player.transform;
