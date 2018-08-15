@@ -13,7 +13,7 @@ public class CheckpointTracker : MonoBehaviour {
 		}
 	}
 
-	public static Checkpoint latestCheckpoint = new Checkpoint(new Vector3(45, 14, 0), 21);
+	public static Checkpoint latestCheckpoint;
 
 	public static void SetLatestCheckpoint(Vector3 playerPos, int blackHoleStartingNode) {
 		latestCheckpoint = new Checkpoint(playerPos, blackHoleStartingNode);
