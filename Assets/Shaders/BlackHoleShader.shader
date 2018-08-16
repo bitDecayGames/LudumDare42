@@ -50,9 +50,9 @@ Shader "Hidden/BlackHoleShader"
 			    
 			    half4 res = tex2D(_MainTex, offset);
 			    
-//			    if (rad < _Black){
-//			        res = half4(0, 0, 0, 1);
-//			    }
+			    if (rad < _Black){
+			        res = half4(0, 0, 0, 1);
+			    }
 			    return res;
 			}
 			
